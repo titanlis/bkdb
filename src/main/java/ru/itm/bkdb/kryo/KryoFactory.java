@@ -2,17 +2,10 @@ package ru.itm.bkdb.kryo;
 
 
 import com.esotericsoftware.kryo.kryo5.Kryo;
-import com.esotericsoftware.kryo.kryo5.serializers.DefaultSerializers;
-import ru.itm.bkdb.entity.AbstractEntity;
-import ru.itm.bkdb.entity.tables.act.Act;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.net.URI;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.regex.Pattern;
+import ru.itm.bkdb.entity.tables.config.ValuesData;
+import ru.itm.bkdb.entity.tables.operator.Act;
+import ru.itm.bkdb.entity.tables.operator.ActToRole;
+import ru.itm.bkdb.entity.tables.operator.Role;
 
 public abstract class KryoFactory {
 
@@ -29,6 +22,9 @@ public abstract class KryoFactory {
     protected Kryo createKryo() {
         Kryo kryo = new Kryo();
         kryo.register(Act.class);
+        kryo.register(ActToRole.class);
+        kryo.register(Role.class);
+        kryo.register(ValuesData.class);
 
         return kryo;
     }

@@ -1,22 +1,19 @@
-package ru.itm.bkdb.entity.tables.act;
+package ru.itm.bkdb.entity.tables.operator;
 
 
 import ru.itm.bkdb.entity.AbstractEntity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "acts", schema = "operator")
-public class Act extends AbstractEntity {
-
+@Table(name = "roles", schema = "operator")
+public final class Role extends AbstractEntity {
 	private String name;
 	private String descr;
 	private boolean active;
 
-	public Act(){}
+	public Role(){}
 
 	public String getName() {
 		return name;
@@ -43,8 +40,6 @@ public class Act extends AbstractEntity {
 	}
 
 	public String toStringShow(){
-		return "[id=" + id + ", name=\'" + name + "\', descr=\'" + descr + "\', active=" + active+"]" ;
+		return "[id=" + id + ", name =\'" + name + "\', descr=\'" + descr +", active=\'"+ active +"\']";
 	}
-
-
 }

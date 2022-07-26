@@ -1,7 +1,7 @@
-package ru.itm.bkdb.repository.act;
+package ru.itm.bkdb.repository.operator;
 
 import org.springframework.stereotype.Repository;
-import ru.itm.bkdb.entity.tables.act.ActToRole;
+import ru.itm.bkdb.entity.tables.operator.ActToRole;
 import ru.itm.bkdb.repository.CommonRepository;
 
 

@@ -1,5 +1,6 @@
 package ru.itm.bkdb.controllers;
 
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,20 +18,24 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import ru.itm.bkdb.entity.TableVersion;
-import ru.itm.bkdb.entity.tables.act.Act;
+import ru.itm.bkdb.entity.tables.config.ValuesData;
+import ru.itm.bkdb.entity.tables.operator.Act;
+import ru.itm.bkdb.entity.tables.operator.ActToRole;
+import ru.itm.bkdb.entity.tables.operator.Role;
 import ru.itm.bkdb.kryo.KryoSerializer;
 import ru.itm.bkdb.network.Request;
 import ru.itm.bkdb.network.config.IpAddressBk;
-import ru.itm.bkdb.repository.act.ActRepository;
+import ru.itm.bkdb.repository.config.ValuesDataRepository;
+import ru.itm.bkdb.repository.operator.ActRepository;
+import ru.itm.bkdb.repository.operator.ActToRoleRepository;
+import ru.itm.bkdb.repository.operator.RoleRepository;
 import ru.itm.bkdb.serivce.TablesService;
 import ru.itm.bkdb.udp.DBModelContainer;
 
+import java.sql.SQLException;
 import java.time.Instant;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.BiConsumer;
 
 /**
  * Основной контроллер сервиса
@@ -71,6 +76,23 @@ public class UpdateController {
         this.actRepository = actRepository;
     }
 
+    private ActToRoleRepository actToRoleRepository;
+    @Autowired
+    public void setActRepository(ActToRoleRepository actToRoleRepository) {
+        this.actToRoleRepository = actToRoleRepository;
+    }
+
+    private RoleRepository roleRepository;
+    @Autowired
+    public void setRoleRepository(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
+
+    private ValuesDataRepository valuesDataRepository;
+    @Autowired
+    public void setValuesDataRepository(ValuesDataRepository valuesDataRepository) {
+        this.valuesDataRepository = valuesDataRepository;
+    }
     /**
      * Запускается с задержкой 10с проверка необходимости обновления баз
      * на случай оффлайна. При выходе из оффлайна максимум через 10с базы обновятся.
@@ -144,6 +166,35 @@ public class UpdateController {
                                         actRepository.save(deserialize);
                                     });
                                 }
+                                case "acts_to_roles" -> {
+                                    actToRoleRepository.deleteAll();
+                                    dbModelContainer.getData().stream().forEach(bytesArray -> {
+                                        ActToRole deserialize = (ActToRole) KryoSerializer.deserialize(bytesArray);
+                                        System.out.println(deserialize.toStringShow());
+                                        actToRoleRepository.save(deserialize);
+                                    });
+                                }
+                                case "roles" -> {
+                                    roleRepository.deleteAll();
+                                    dbModelContainer.getData().stream().forEach(bytesArray -> {
+                                        Role deserialize = (Role) KryoSerializer.deserialize(bytesArray);
+                                        System.out.println(deserialize.toStringShow());
+                                        roleRepository.save(deserialize);
+                                    });
+                                }
+                                case "values_data" -> {
+                                    try {
+                                        valuesDataRepository.deleteAll();
+                                        dbModelContainer.getData().stream().forEach(bytesArray -> {
+                                            ValuesData deserialize = (ValuesData) KryoSerializer.deserialize(bytesArray);
+                                            System.out.println(deserialize.toStringShow());
+                                            valuesDataRepository.save(deserialize);
+                                        });                                    }catch (Exception e){
+                                        System.out.println("Надо бы создать таблицу");
+                                    }
+                                }
+
+                                default -> logger.info("No table to update was found.");
                             }
 
                             updateVersion(tableVersions,

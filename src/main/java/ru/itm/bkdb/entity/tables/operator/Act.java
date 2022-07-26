@@ -1,19 +1,22 @@
-package ru.itm.bkdb.entity.tables.act;
-
+/**
+ * @file act.java
+ * Entity для operator.acts - обновление реализовано
+ */
+package ru.itm.bkdb.entity.tables.operator;
 
 import ru.itm.bkdb.entity.AbstractEntity;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "roles", schema = "operator")
-public final class Role extends AbstractEntity {
+@Table(name = "acts", schema = "operator")
+public class Act extends AbstractEntity {
+
 	private String name;
 	private String descr;
 	private boolean active;
 
-	public Role(){}
+	public Act(){}
 
 	public String getName() {
 		return name;
@@ -38,4 +41,10 @@ public final class Role extends AbstractEntity {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+
+	public String toStringShow(){
+		return "[id=" + id + ", name=\'" + name + "\', descr=\'" + descr + "\', active=" + active+"]" ;
+	}
+
+
 }
