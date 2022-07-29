@@ -10,4 +10,9 @@ import javax.persistence.Table;
 public final class StatusGroup extends AbstractEntity {
 	private String name;
 	public StatusGroup(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

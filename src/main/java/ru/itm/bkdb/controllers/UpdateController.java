@@ -1,6 +1,5 @@
 package ru.itm.bkdb.controllers;
 
-import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,23 +16,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
+import ru.itm.bkdb.entity.AbstractEntity;
 import ru.itm.bkdb.entity.TableVersion;
 import ru.itm.bkdb.entity.tables.config.ValuesData;
+import ru.itm.bkdb.entity.tables.dispatcher.Dispatcher;
+import ru.itm.bkdb.entity.tables.drilling.Hole;
+import ru.itm.bkdb.entity.tables.drilling.HoleStatus;
+import ru.itm.bkdb.entity.tables.location.Location;
 import ru.itm.bkdb.entity.tables.operator.Act;
 import ru.itm.bkdb.entity.tables.operator.ActToRole;
 import ru.itm.bkdb.entity.tables.operator.Role;
 import ru.itm.bkdb.kryo.KryoSerializer;
 import ru.itm.bkdb.network.Request;
 import ru.itm.bkdb.network.config.IpAddressBk;
+import ru.itm.bkdb.repository.CommonRepository;
+import ru.itm.bkdb.repository.RepositoryFactory;
 import ru.itm.bkdb.repository.config.ValuesDataRepository;
-import ru.itm.bkdb.repository.operator.ActRepository;
-import ru.itm.bkdb.repository.operator.ActToRoleRepository;
-import ru.itm.bkdb.repository.operator.RoleRepository;
+import ru.itm.bkdb.repository.dispatcher.DispatcherRepository;
+import ru.itm.bkdb.repository.drilling.HoleRepository;
+import ru.itm.bkdb.repository.drilling.HoleStatusRepository;
+import ru.itm.bkdb.repository.location.LocationRepository;
+import ru.itm.bkdb.repository.operator.*;
 import ru.itm.bkdb.serivce.TablesService;
 import ru.itm.bkdb.udp.DBModelContainer;
 
-import java.sql.SQLException;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -69,30 +77,9 @@ public class UpdateController {
     @Value("${period.update}")
     private long period;
 
+    private CommonRepository commonRepository;
 
-    private ActRepository actRepository;
-    @Autowired
-    public void setActRepository(ActRepository actRepository) {
-        this.actRepository = actRepository;
-    }
 
-    private ActToRoleRepository actToRoleRepository;
-    @Autowired
-    public void setActRepository(ActToRoleRepository actToRoleRepository) {
-        this.actToRoleRepository = actToRoleRepository;
-    }
-
-    private RoleRepository roleRepository;
-    @Autowired
-    public void setRoleRepository(RoleRepository roleRepository) {
-        this.roleRepository = roleRepository;
-    }
-
-    private ValuesDataRepository valuesDataRepository;
-    @Autowired
-    public void setValuesDataRepository(ValuesDataRepository valuesDataRepository) {
-        this.valuesDataRepository = valuesDataRepository;
-    }
     /**
      * Запускается с задержкой 10с проверка необходимости обновления баз
      * на случай оффлайна. При выходе из оффлайна максимум через 10с базы обновятся.
@@ -118,6 +105,10 @@ public class UpdateController {
      */
     @GetMapping("/update")
     public void updateTablesSearch(){
+        /**Для имен таблиц, которые не обновились*/
+        List<String> listTableNameNoUpdates = new ArrayList<>();
+
+
         /**Читаем все данные по версиям из базы в лист*/
         List<TableVersion> tableVersions = tablesService.findAll();
 
@@ -157,49 +148,46 @@ public class UpdateController {
                                 + ipAddressBk.getIp() + "/update/" + tableName);
 
                         if(dbModelContainer!=null){
-                            switch (tableNameResponse) {
-                                case "acts" -> {
-                                    actRepository.deleteAll();
-                                    dbModelContainer.getData().stream().forEach(bytesArray -> {
-                                        Act deserialize = (Act) KryoSerializer.deserialize(bytesArray);
-                                        System.out.println(deserialize.toStringShow());
-                                        actRepository.save(deserialize);
-                                    });
-                                }
-                                case "acts_to_roles" -> {
-                                    actToRoleRepository.deleteAll();
-                                    dbModelContainer.getData().stream().forEach(bytesArray -> {
-                                        ActToRole deserialize = (ActToRole) KryoSerializer.deserialize(bytesArray);
-                                        System.out.println(deserialize.toStringShow());
-                                        actToRoleRepository.save(deserialize);
-                                    });
-                                }
-                                case "roles" -> {
-                                    roleRepository.deleteAll();
-                                    dbModelContainer.getData().stream().forEach(bytesArray -> {
-                                        Role deserialize = (Role) KryoSerializer.deserialize(bytesArray);
-                                        System.out.println(deserialize.toStringShow());
-                                        roleRepository.save(deserialize);
-                                    });
-                                }
-                                case "values_data" -> {
-                                    try {
-                                        valuesDataRepository.deleteAll();
-                                        dbModelContainer.getData().stream().forEach(bytesArray -> {
-                                            ValuesData deserialize = (ValuesData) KryoSerializer.deserialize(bytesArray);
-                                            System.out.println(deserialize.toStringShow());
-                                            valuesDataRepository.save(deserialize);
-                                        });                                    }catch (Exception e){
-                                        System.out.println("Надо бы создать таблицу");
-                                    }
-                                }
-
-                                default -> logger.info("No table to update was found.");
+                            List<AbstractEntity> abstractEntityList = new ArrayList<>();
+                            commonRepository = this.updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                            switch (tableNameResponse) {
+//                                case "acts" -> {
+//                                    commonRepository = this.<Act>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "acts_to_roles" -> {
+//                                    commonRepository = this.<ActToRole>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "roles" -> {
+//                                    commonRepository = this.<Role>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "values_data" -> {
+//                                    commonRepository = this.<ValuesData>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "dispatcher" -> {
+//                                    commonRepository = this.<Dispatcher>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "location" -> {
+//                                    commonRepository = this.<Location>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "holes" -> {
+//                                    commonRepository = this.<Hole>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                case "hole_status" -> {
+//                                    commonRepository = this.<HoleStatus>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+//                                }
+//                                default -> logger.info("No table to update was found.");
+//                            }
+                            if(!abstractEntityList.isEmpty()){
+                                commonRepository.deleteAll();
+                                commonRepository.saveAll(abstractEntityList);
+                                updateVersion(tableVersions,
+                                        tableNameResponse,
+                                        Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
+                                logger.info("База " + tableName + " обновлена");
                             }
-
-                            updateVersion(tableVersions,
-                                    tableNameResponse,
-                                    Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
+                            else{
+                                listTableNameNoUpdates.add(tableNameResponse);
+                            }
                         }
                     });
 
@@ -210,8 +198,16 @@ public class UpdateController {
             logger.error("Connect exception \'" + urlFull +"\'");
             logger.info("Ожидаем выхода из offline");
         }
-        logger.info("Все бызы обновлены");
+        if(listTableNameNoUpdates.isEmpty()){
+            logger.info("Все базы обновлены");
+        }
+        else {
+            logger.info("Базы не обновлены:");
+            listTableNameNoUpdates.stream().forEach(t->logger.info(t));
+        }
     }
+
+
 
     /**
      * Вывод списка версий на экран
@@ -244,4 +240,21 @@ public class UpdateController {
         tablesService.save(t);
         logger.info(tableName + " = " + newVersion + " TableVersions в базе обновили");
     }
+
+    private <T> CommonRepository updateTable(DBModelContainer dbModelContainer,
+                                             List<AbstractEntity> abstractEntityList,
+                                             String tableNameResponse){
+        try {
+            dbModelContainer.getData().stream().forEach(bytesArray -> {
+                T deserialize = (T) KryoSerializer.deserialize(bytesArray);
+                System.out.println(((AbstractEntity)deserialize).toStringShow());
+                abstractEntityList.add((AbstractEntity) deserialize);
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Надо бы создать таблицу");
+        }
+        return RepositoryFactory.getRepo(tableNameResponse);
+    }
+
 }

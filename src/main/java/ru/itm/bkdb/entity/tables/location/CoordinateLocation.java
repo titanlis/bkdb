@@ -26,4 +26,9 @@ public final class CoordinateLocation extends AbstractEntity {
 	
 
 	public CoordinateLocation() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

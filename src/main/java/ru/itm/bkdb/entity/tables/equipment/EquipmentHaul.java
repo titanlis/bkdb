@@ -23,4 +23,9 @@ public class EquipmentHaul extends AbstractEntity {
 
 	public EquipmentHaul() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

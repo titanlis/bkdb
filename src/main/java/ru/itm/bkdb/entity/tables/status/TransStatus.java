@@ -39,4 +39,8 @@ public class TransStatus extends AbstractEntity {
 	
 	public TransStatus() {}
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

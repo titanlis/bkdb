@@ -18,5 +18,10 @@ public class Road extends AbstractEntity {
 	private Float angle;
 	private boolean active;
 
-	public Road(){}  
+	public Road(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

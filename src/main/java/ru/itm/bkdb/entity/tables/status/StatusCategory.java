@@ -32,4 +32,9 @@ public final class StatusCategory extends AbstractEntity {
 	private String pic;
 
 	public StatusCategory(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

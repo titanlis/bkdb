@@ -33,4 +33,9 @@ public class EquipmentDrill extends AbstractEntity {
 	public EquipmentDrill() {
 		
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

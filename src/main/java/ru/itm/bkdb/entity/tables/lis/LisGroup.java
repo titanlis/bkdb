@@ -11,4 +11,9 @@ public class LisGroup extends AbstractEntity {
 	private String name;
 
 	public LisGroup(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

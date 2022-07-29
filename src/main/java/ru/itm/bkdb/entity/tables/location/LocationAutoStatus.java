@@ -27,4 +27,9 @@ public final class LocationAutoStatus extends AbstractEntity {
 	
 	
 	public LocationAutoStatus(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -12,4 +12,9 @@ public class LisType extends AbstractEntity {
 	private String description;
 
 	public LisType(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

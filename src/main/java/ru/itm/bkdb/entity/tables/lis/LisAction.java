@@ -16,4 +16,9 @@ public class LisAction extends AbstractEntity {
 	private String description;
 
 	public LisAction(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

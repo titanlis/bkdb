@@ -25,4 +25,9 @@ public class ActionGroup  extends AbstractEntity {
 
 	public ActionGroup() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

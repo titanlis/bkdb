@@ -14,4 +14,9 @@ public final class OperatorOnEquipType extends AbstractEntity {
 	
 	@Column(name = "equip_type_id")
 	private Long equipTypeId;
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

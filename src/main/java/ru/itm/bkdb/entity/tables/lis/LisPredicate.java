@@ -17,4 +17,9 @@ public class LisPredicate extends AbstractEntity {
 	private String function;	
 
 	public LisPredicate(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

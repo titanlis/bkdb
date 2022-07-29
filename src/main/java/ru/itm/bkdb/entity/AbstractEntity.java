@@ -22,6 +22,6 @@ public abstract class AbstractEntity{
         this.id = id;
     }
 
-
+    public abstract String toStringShow();
 
 }

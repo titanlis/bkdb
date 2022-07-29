@@ -16,4 +16,9 @@ public final class OperatorOnEquip extends AbstractEntity {
 	private Long equipId;
 
 	public OperatorOnEquip(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

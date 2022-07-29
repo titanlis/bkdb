@@ -25,5 +25,9 @@ public final class TireAssign extends AbstractEntity {
 	
 	@Column(name = "sensor_id")
 	private Long sensorId;
-	
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

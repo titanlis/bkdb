@@ -20,4 +20,8 @@ public final class Map extends AbstractEntity {
 
 	public Map(){}
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

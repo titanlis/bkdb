@@ -16,4 +16,9 @@ public final class LocationInheritance extends AbstractEntity {
 	private Long childLocId;
 
 	public LocationInheritance(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

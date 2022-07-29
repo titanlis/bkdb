@@ -16,4 +16,9 @@ public final class StatusInheritance extends AbstractEntity {
 	private Long nxtStId;
 	
 	private boolean excluded;
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

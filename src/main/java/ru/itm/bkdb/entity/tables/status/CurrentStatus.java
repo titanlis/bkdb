@@ -107,4 +107,9 @@ public class CurrentStatus extends AbstractEntity {
 	public Statuses getPrev2StatusThree() {
 		return prev2StatusThree;
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

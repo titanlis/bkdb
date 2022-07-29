@@ -15,5 +15,10 @@ public class ActionVariableSource extends AbstractEntity {
 	@Column(name = "type")	
 	private Long typeId;
 	
-	public ActionVariableSource(){}	
+	public ActionVariableSource(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -20,4 +20,9 @@ public class LisSourceVariable extends AbstractEntity {
 	private int lisSourceId;	
 	
 	public LisSourceVariable(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -15,5 +15,10 @@ public final class StatusGroupRelation extends AbstractEntity {
 	@Column(name = "status_group_id")
 	private Long statusGroupId;
 
-	public StatusGroupRelation() {}	
+	public StatusGroupRelation() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

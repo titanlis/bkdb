@@ -23,4 +23,9 @@ public class Material extends AbstractEntity {
 	private Boolean active;
 
 	public Material() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

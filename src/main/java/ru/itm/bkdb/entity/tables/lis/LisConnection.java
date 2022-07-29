@@ -22,4 +22,9 @@ public class LisConnection extends AbstractEntity {
 	
 	public LisConnection() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

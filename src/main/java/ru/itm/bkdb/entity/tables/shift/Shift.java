@@ -22,4 +22,9 @@ public final class Shift extends AbstractEntity {
 	private Integer threshold;
 
 	public Shift(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

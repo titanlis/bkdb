@@ -22,4 +22,8 @@ public final class SpeedLimits extends AbstractEntity {
 
 	public SpeedLimits(){}
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

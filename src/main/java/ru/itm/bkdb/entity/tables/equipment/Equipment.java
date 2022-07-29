@@ -58,4 +58,8 @@ public class Equipment extends AbstractEntity {
 	}
 
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

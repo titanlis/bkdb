@@ -19,4 +19,9 @@ public class LisPoint extends AbstractEntity {
 	private Long connectionId;
 
 	public LisPoint() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

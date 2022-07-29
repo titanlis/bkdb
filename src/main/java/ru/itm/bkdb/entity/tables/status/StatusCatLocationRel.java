@@ -22,4 +22,9 @@ public final class StatusCatLocationRel extends AbstractEntity {
 	private Boolean onExit;
 
 	public StatusCatLocationRel() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

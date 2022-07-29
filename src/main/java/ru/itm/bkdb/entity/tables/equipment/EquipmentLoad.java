@@ -24,5 +24,9 @@ public class EquipmentLoad  extends AbstractEntity {
 
 	public EquipmentLoad() {
 	}
-	
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -11,5 +11,10 @@ public final class MaterialType extends AbstractEntity {
 	private String name;
 	private String description;
 
-	public MaterialType(){}	
+	public MaterialType(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

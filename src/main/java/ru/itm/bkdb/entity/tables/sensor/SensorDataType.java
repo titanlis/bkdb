@@ -10,4 +10,9 @@ import javax.persistence.Table;
 public final class SensorDataType extends AbstractEntity {
 	private String name;
 	public SensorDataType(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

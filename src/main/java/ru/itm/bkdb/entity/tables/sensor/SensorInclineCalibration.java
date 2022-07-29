@@ -22,4 +22,9 @@ public final class SensorInclineCalibration extends AbstractEntity {
 	private Double calibC;
 
 	public SensorInclineCalibration(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

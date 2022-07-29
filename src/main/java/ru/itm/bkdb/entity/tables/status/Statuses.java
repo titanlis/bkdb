@@ -28,4 +28,9 @@ public class Statuses extends AbstractEntity {
 	public void setExt_id(String ext_id) {
 		this.ext_id = ext_id;
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

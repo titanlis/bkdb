@@ -25,5 +25,10 @@ public class LisActionVariable extends AbstractEntity {
 	@Column(name = "action_varible_source_FK", nullable = true)
 	private Integer actionVariableSourceFk;	
 
-	public LisActionVariable(){} 
+	public LisActionVariable(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -142,5 +142,9 @@ public class LocalData extends AbstractEntity {
 	public void setIsStopedTech(boolean isStopedTech) {
 		this.isStopedTech = isStopedTech;
 	}
-	
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

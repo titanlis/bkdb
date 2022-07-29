@@ -14,4 +14,9 @@ public final class TireStorage extends AbstractEntity {
 	
 	@Column(name = "max_storage")
 	private Integer maxStorage;
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

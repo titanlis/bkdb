@@ -26,4 +26,8 @@ public class Operator extends AbstractEntity {
 
 	public Operator() {}
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

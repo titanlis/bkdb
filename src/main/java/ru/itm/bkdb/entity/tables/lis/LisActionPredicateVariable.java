@@ -18,4 +18,9 @@ public class LisActionPredicateVariable extends AbstractEntity {
 
 	public LisActionPredicateVariable() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

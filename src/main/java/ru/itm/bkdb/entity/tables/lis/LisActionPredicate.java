@@ -22,4 +22,9 @@ public class LisActionPredicate extends AbstractEntity {
 	
 	public LisActionPredicate() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

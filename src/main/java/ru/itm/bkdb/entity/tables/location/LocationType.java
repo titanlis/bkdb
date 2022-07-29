@@ -19,4 +19,9 @@ public final class LocationType extends AbstractEntity {
 	private String locationColor;
 
 	public LocationType(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -20,4 +20,9 @@ public class EquipmentType extends AbstractEntity {
 	public EquipmentType() {
 		
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

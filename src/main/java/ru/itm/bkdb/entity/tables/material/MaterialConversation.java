@@ -19,4 +19,9 @@ public final class MaterialConversation extends AbstractEntity {
 	private Double value;
 	
 	public MaterialConversation(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

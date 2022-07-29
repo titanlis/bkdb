@@ -15,4 +15,9 @@ public class FileResourceVersion extends AbstractEntity {
 	private Calendar date;
 
 	public FileResourceVersion() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

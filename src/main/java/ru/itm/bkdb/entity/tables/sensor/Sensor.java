@@ -47,4 +47,9 @@ public final class Sensor extends AbstractEntity {
 	private boolean enableSens;
 
 	public Sensor() {}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

@@ -20,4 +20,9 @@ public class LisPredicateVariable extends AbstractEntity {
 	private int lisPredicateId;	
 	
 	public LisPredicateVariable(){}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

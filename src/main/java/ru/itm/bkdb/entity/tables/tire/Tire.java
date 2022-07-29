@@ -27,4 +27,8 @@ public class Tire extends AbstractEntity {
 
 	public Tire() {}
 
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }

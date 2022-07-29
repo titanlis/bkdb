@@ -22,4 +22,9 @@ public class LisActionSourceVariable extends AbstractEntity {
 	
 	public LisActionSourceVariable() {
 	}
+
+	@Override
+	public String toStringShow() {
+		return null;
+	}
 }
