@@ -10,5 +10,10 @@ public enum EQUIPMENT_TYPE {
 	AUX,
 	STUFF,
 	LOADER,
-	GRADER
+	GRADER;
+
+	EQUIPMENT_TYPE() {
+	}
+
+
 }

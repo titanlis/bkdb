@@ -9,33 +9,81 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "equipment_drill", schema = "equipment")
 public class EquipmentDrill extends AbstractEntity {
-	@Column(name = "type")
+	private Long equip_id;
 	private String type = "TOWER";
-	
-	@Column(name = "bx_shift")
-	private double bxShift;
-	
-	@Column(name = "by_shift")
-	private double byShift;
-	
+	private double bx_shift;
+	private double by_shift;
 	private double bh;
-	
-	@Column(name = "H")
-	private double height;
-	
+	private double h;
 	private double bc;
 
-	
-	@Column(name = "equip_id")
-	private Long equipmentId;
-	
-	
-	public EquipmentDrill() {
-		
+	public EquipmentDrill() {}
+
+	@Override
+	public String toString() {
+		return "Equipment [id=" + id + ", type=" + type + ", bx_shift=" + bx_shift
+				+ ", by_shift=" + by_shift + ", bh=" + bh + ", H=" + h + ", bc="
+				+ bc + ", equip_id=" + equip_id + "]";
 	}
 
 	@Override
 	public String toStringShow() {
-		return null;
+		return toString();
+	}
+
+	public Long getEquip_id() {
+		return equip_id;
+	}
+
+	public void setEquip_id(Long equip_id) {
+		this.equip_id = equip_id;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public double getBx_shift() {
+		return bx_shift;
+	}
+
+	public void setBx_shift(double bx_shift) {
+		this.bx_shift = bx_shift;
+	}
+
+	public double getBy_shift() {
+		return by_shift;
+	}
+
+	public void setBy_shift(double by_shift) {
+		this.by_shift = by_shift;
+	}
+
+	public double getBh() {
+		return bh;
+	}
+
+	public void setBh(double bh) {
+		this.bh = bh;
+	}
+
+	public double getH() {
+		return h;
+	}
+
+	public void setH(double h) {
+		this.h = h;
+	}
+
+	public double getBc() {
+		return bc;
+	}
+
+	public void setBc(double bc) {
+		this.bc = bc;
 	}
 }
