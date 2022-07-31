@@ -7,6 +7,7 @@ import ru.itm.bkdb.entity.tables.dispatcher.Dispatcher;
 import ru.itm.bkdb.entity.tables.drilling.Hole;
 import ru.itm.bkdb.entity.tables.drilling.HoleStatus;
 import ru.itm.bkdb.entity.tables.equipment.*;
+import ru.itm.bkdb.entity.tables.lis.*;
 import ru.itm.bkdb.entity.tables.location.Location;
 import ru.itm.bkdb.entity.tables.operator.Act;
 import ru.itm.bkdb.entity.tables.operator.ActToRole;
@@ -39,6 +40,11 @@ public abstract class KryoFactory {
         kryo.register(EquipmentLoad.class);
         kryo.register(EQUIPMENT_TYPE.class);
         kryo.register(EquipmentType.class);
+        kryo.register(ActionGroup.class);
+        kryo.register(ActionVariableSource.class);
+        kryo.register(LisAction.class);
+        kryo.register(LisActionPredicate.class);
+        kryo.register(LisActionPredicateVarible.class);
 
         kryo.register(Location.class);
 

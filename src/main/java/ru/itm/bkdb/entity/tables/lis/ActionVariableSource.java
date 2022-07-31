@@ -7,18 +7,32 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "action_varible_source", schema = "lis")
+@Table(name = "action_variable_source", schema = "lis")
 public class ActionVariableSource extends AbstractEntity {
 
 	private String name;
-	
-	@Column(name = "type")	
-	private Long typeId;
-	
+	private Long type;
+
 	public ActionVariableSource(){}
 
 	@Override
 	public String toStringShow() {
-		return null;
+		return "ActionGroup [id=" + id + ", name=" + name + ", type=" + type + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Long getType() {
+		return type;
+	}
+
+	public void setType(Long type) {
+		this.type = type;
 	}
 }

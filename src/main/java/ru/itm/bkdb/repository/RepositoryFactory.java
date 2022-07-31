@@ -3,12 +3,12 @@ package ru.itm.bkdb.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Component;
-import ru.itm.bkdb.entity.tables.equipment.EquipmentDrill;
 import ru.itm.bkdb.repository.config.ValuesDataRepository;
 import ru.itm.bkdb.repository.dispatcher.DispatcherRepository;
 import ru.itm.bkdb.repository.drilling.HoleRepository;
 import ru.itm.bkdb.repository.drilling.HoleStatusRepository;
 import ru.itm.bkdb.repository.equipment.*;
+import ru.itm.bkdb.repository.lis.*;
 import ru.itm.bkdb.repository.location.LocationRepository;
 import ru.itm.bkdb.repository.operator.ActRepository;
 import ru.itm.bkdb.repository.operator.ActToRoleRepository;
@@ -29,6 +29,36 @@ public class RepositoryFactory {
     private static EquipmentHaulRepository equipmentHaulRepository;
     private static EquipmentLoadRepository equipmentLoadRepository;
     private static EquipmentTypeRepository equipmentTypeRepository;
+    private static ActionGroupRepository actionGroupRepository;
+    private static ActionVariableSourceRepository actionVariableSourceRepository;
+    private static LisActionRepository lisActionRepository;
+    private static LisActionPredicateRepository lisActionPredicateRepository;
+    private static LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository;
+    @Autowired
+    public void setLisActionPredicateVariableRepository(LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository) {
+        RepositoryFactory.lisActionPredicateVaribleRepository = lisActionPredicateVaribleRepository;
+    }
+
+    @Autowired
+    public void setLisActionPredicateRepository(LisActionPredicateRepository lisActionPredicateRepository) {
+        RepositoryFactory.lisActionPredicateRepository = lisActionPredicateRepository;
+    }
+
+    @Autowired
+    public void setLisActionRepository(LisActionRepository lisActionRepository) {
+        RepositoryFactory.lisActionRepository = lisActionRepository;
+    }
+
+    @Autowired
+    public void setActionVariableSourceRepository(ActionVariableSourceRepository actionVariableSourceRepository) {
+        RepositoryFactory.actionVariableSourceRepository = actionVariableSourceRepository;
+    }
+
+    @Autowired
+    public void setActionGroupRepository(ActionGroupRepository actionGroupRepository) {
+        RepositoryFactory.actionGroupRepository = actionGroupRepository;
+    }
+
     @Autowired
     public void setEquipmentTypeRepository(EquipmentTypeRepository equipmentTypeRepository) {
         RepositoryFactory.equipmentTypeRepository = equipmentTypeRepository;
@@ -136,6 +166,22 @@ public class RepositoryFactory {
             case "equip_type" -> {
                 return equipmentTypeRepository;
             }
+            case "action_group" -> {
+                return actionGroupRepository;
+            }
+            case "action_variable_source" -> {
+                return actionVariableSourceRepository;
+            }
+            case "lis_action" -> {
+                return lisActionRepository;
+            }
+            case "lis_action_predicate" -> {
+                return lisActionPredicateRepository;
+            }
+            case "lis_action_predicate_varible" -> {
+                return lisActionPredicateVaribleRepository;
+            }
+
 
             default -> { return null; }
         }
