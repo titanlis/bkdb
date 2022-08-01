@@ -245,7 +245,7 @@ public class RepositoryFactory {
             case "lis_predicate_varible" -> {
                 return lisPredicateVariableRepository;
             }
-            default -> { return null; }
+            default -> { return  null; }
         }
     }
 
