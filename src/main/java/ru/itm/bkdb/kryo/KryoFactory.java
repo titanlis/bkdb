@@ -46,7 +46,12 @@ public abstract class KryoFactory {
         kryo.register(LisActionPredicate.class);
         kryo.register(LisActionPredicateVarible.class);
         kryo.register(LisActionSourceVariable.class);
-
+        kryo.register(LisPredicate.class);
+        kryo.register(LisSourceVariable.class);
+        kryo.register(LisType.class);
+        kryo.register(LisActionVariable.class);
+        kryo.register(LisConnection.class);
+        kryo.register(LisPredicateVariable.class);
 
         kryo.register(Location.class);
 

@@ -11,20 +11,54 @@ import javax.persistence.Table;
 public class LisConnection extends AbstractEntity {
 
 	@Column(name = "predicate_FK")
-	private Long lisPredicateId;
+	private Long predicate_fk;
 	
 	@Column(name = "action_result_FK")
-	private Long actionResultId;
+	private Long action_result_fk;
 	
 	@Column(name = "action_precond_FK")
-	private Long actionPrecondId;
+	private Long action_precond_fk;
 	
 	
 	public LisConnection() {
 	}
 
 	@Override
+	public String toString() {
+		return "LisConnection{" +
+				"id=" + id +
+				", predicate_fk=" + predicate_fk +
+				", action_result_fk=" + action_result_fk +
+				", action_precond_fk=" + action_precond_fk +
+				'}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
+	}
+
+	public Long getPredicate_fk() {
+		return predicate_fk;
+	}
+
+	public void setPredicate_fk(Long predicate_fk) {
+		this.predicate_fk = predicate_fk;
+	}
+
+	public Long getAction_result_fk() {
+		return action_result_fk;
+	}
+
+	public void setAction_result_fk(Long action_result_fk) {
+		this.action_result_fk = action_result_fk;
+	}
+
+	public Long getAction_precond_fk() {
+		return action_precond_fk;
+	}
+
+	public void setAction_precond_fk(Long action_precond_fk) {
+		this.action_precond_fk = action_precond_fk;
 	}
 }

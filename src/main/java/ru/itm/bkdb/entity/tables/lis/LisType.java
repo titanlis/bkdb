@@ -14,7 +14,32 @@ public class LisType extends AbstractEntity {
 	public LisType(){}
 
 	@Override
+	public String toString() {
+		return "LisSourceVariable{" +
+				"id=" + id +
+				", name=" + name +
+				", description=" + description +
+				'}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

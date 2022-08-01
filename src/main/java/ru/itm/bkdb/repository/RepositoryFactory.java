@@ -35,6 +35,42 @@ public class RepositoryFactory {
     private static LisActionPredicateRepository lisActionPredicateRepository;
     private static LisActionPredicateVaribleRepository lisActionPredicateVaribleRepository;
     private static LisActionSourceVariableRepository lisActionSourceVariableRepository;
+    private static LisPredicateRepository lisPredicateRepository;
+    private static LisSourceVariableRepository lisSourceVariableRepository;
+    private static LisTypeRepository lisTypeRepository;
+    private static LisActionVariableRepository lisActionVariableRepository;
+    private static LisConnectionRepository lisConnectionRepository;
+    private static LisPredicateVariableRepository lisPredicateVariableRepository;
+
+    @Autowired
+    public void setLisPredicateVariableRepository(LisPredicateVariableRepository lisPredicateVariableRepository) {
+        RepositoryFactory.lisPredicateVariableRepository = lisPredicateVariableRepository;
+    }
+
+    @Autowired
+    public void setLisConnectionRepository(LisConnectionRepository lisConnectionRepository) {
+        RepositoryFactory.lisConnectionRepository = lisConnectionRepository;
+    }
+
+    @Autowired
+    public void setLisActionVariableRepository(LisActionVariableRepository lisActionVariableRepository) {
+        RepositoryFactory.lisActionVariableRepository = lisActionVariableRepository;
+    }
+
+    @Autowired
+    public void setLisTypeRepository(LisTypeRepository lisTypeRepository) {
+        RepositoryFactory.lisTypeRepository = lisTypeRepository;
+    }
+
+    @Autowired
+    public void setLisSourceVariableRepository(LisSourceVariableRepository lisSourceVariableRepository) {
+        RepositoryFactory.lisSourceVariableRepository = lisSourceVariableRepository;
+    }
+
+    @Autowired
+    public void setLisPredicateRepository(LisPredicateRepository lisPredicateRepository) {
+        RepositoryFactory.lisPredicateRepository = lisPredicateRepository;
+    }
 
     @Autowired
     public void setLisActionSourceVariableRepository(LisActionSourceVariableRepository lisActionSourceVariableRepository) {
@@ -191,7 +227,24 @@ public class RepositoryFactory {
             case "lis_action_source_varible" -> {
                 return lisActionSourceVariableRepository;
             }
-
+            case "lis_predicate" -> {
+                return lisPredicateRepository;
+            }
+            case "lis_source_variable" -> {
+                return lisSourceVariableRepository;
+            }
+            case "lis_type" -> {
+                return lisTypeRepository;
+            }
+            case "lis_action_varible" -> {
+                return lisActionVariableRepository;
+            }
+            case "lis_connection" -> {
+                return lisConnectionRepository;
+            }
+            case "lis_predicate_varible" -> {
+                return lisPredicateVariableRepository;
+            }
             default -> { return null; }
         }
     }
