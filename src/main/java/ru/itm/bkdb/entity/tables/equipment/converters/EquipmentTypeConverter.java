@@ -1,5 +1,6 @@
 package ru.itm.bkdb.entity.tables.equipment.converters;
 
+
 import ru.itm.bkdb.entity.tables.equipment.EQUIPMENT_TYPE;
 
 import javax.persistence.AttributeConverter;
@@ -8,6 +9,7 @@ import java.util.stream.Stream;
 
 @Converter(autoApply = true)
 public class EquipmentTypeConverter implements AttributeConverter<EQUIPMENT_TYPE, String> {
+
     @Override
     public String convertToDatabaseColumn(EQUIPMENT_TYPE attribute) {
         if(attribute==null){
