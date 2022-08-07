@@ -12,19 +12,20 @@ public class ValuesData extends AbstractEntity {
 	@Column(name="name")
 	private String name;
 	@Column(name="value_data")
-	private String valueData;
+	private String value_data;
 	@Column(name="descr")
 	private String descr;
 
 
+	@Override
 	public String toStringShow(){
-		return "[id=" + id + ", name =\'" + name + "\', value=\'" + valueData +"\', descr=\'"+ descr +"\']";
+		return "[id=" + id + ", name =\'" + name + "\', value=\'" + value_data +"\', descr=\'"+ descr +"\']";
 	}
 	public ValuesData(){}
 
-	public ValuesData(String name, String valueData, String descr) {
+	public ValuesData(String name, String value_data, String descr) {
 		this.name = name;
-		this.valueData = valueData;
+		this.value_data = value_data;
 		this.descr = descr;
 	}
 
@@ -36,12 +37,12 @@ public class ValuesData extends AbstractEntity {
 		this.name = name;
 	}
 
-	public String getValueData() {
-		return valueData;
+	public String getValue_data() {
+		return value_data;
 	}
 
-	public void setValueData(String valueData) {
-		this.valueData = valueData;
+	public void setValue_data(String value_data) {
+		this.value_data = value_data;
 	}
 
 	public String getDescr() {

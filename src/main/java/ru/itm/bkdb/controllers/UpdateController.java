@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -178,7 +179,12 @@ public class UpdateController {
 //                                default -> logger.info("No table to update was found.");
 //                            }
                             if(!abstractEntityList.isEmpty()){
-                                commonRepository.deleteAll();
+                                try {
+                                    commonRepository.deleteAll();
+                                }catch (DataIntegrityViolationException ex){
+                                    System.out.println("Delete exception : " + ex);
+                                }
+
                                 commonRepository.saveAll(abstractEntityList);
                                 updateVersion(tableVersions,
                                         tableNameResponse,
