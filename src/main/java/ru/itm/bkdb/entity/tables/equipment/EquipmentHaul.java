@@ -20,7 +20,7 @@ public class EquipmentHaul extends AbstractEntity {
 
 	@Override
 	public String toString() {
-		return "Equipment [id=" + id + ", empty_weight=" + empty_weight + ", tire_type=" + tire_type
+		return "equipment.equipment_haul [id=" + id + ", empty_weight=" + empty_weight + ", tire_type=" + tire_type
 				+ ", equip_id=" + equip_id + "]";
 	}
 	@Override

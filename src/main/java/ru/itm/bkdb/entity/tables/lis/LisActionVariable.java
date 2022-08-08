@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "lis_action_varible", schema = "lis")
+@Table(name = "lis_action_variable", schema = "lis")
 public class LisActionVariable extends AbstractEntity {
 	private String name;
 	private String description;
@@ -17,21 +17,21 @@ public class LisActionVariable extends AbstractEntity {
 	private Integer lis_action_fk;
 	
 	//ссылка на ФК соурса
-	@Column(name = "action_varible_source_FK", nullable = true)
-	private Integer action_varible_source_fk;
+	@Column(name = "action_variable_source_FK", nullable = true)
+	private Integer action_variable_source_fk;
 
 	public LisActionVariable(){}
 
 	@Override
 	public String toString() {
-		return "LisSourceVariable{" +
+		return "lis.lis_action_variable{" +
 				"id=" + id +
 				", name=" + name +
 				", description=" + description +
 				", type=" + type +
 				", default_value=" + default_value +
 				", lis_action_fk=" + lis_action_fk +
-				", action_varible_source_fk=" + action_varible_source_fk +
+				", action_variable_source_fk=" + action_variable_source_fk +
 				'}';
 	}
 
@@ -80,11 +80,11 @@ public class LisActionVariable extends AbstractEntity {
 		this.lis_action_fk = lis_action_fk;
 	}
 
-	public Integer getAction_varible_source_fk() {
-		return action_varible_source_fk;
+	public Integer getAction_variable_source_fk() {
+		return action_variable_source_fk;
 	}
 
-	public void setAction_varible_source_fk(Integer action_varible_source_fk) {
-		this.action_varible_source_fk = action_varible_source_fk;
+	public void setAction_variable_source_fk(Integer action_variable_source_fk) {
+		this.action_variable_source_fk = action_variable_source_fk;
 	}
 }

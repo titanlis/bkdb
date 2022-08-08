@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "lis_action_source_varible", schema = "lis")
+@Table(name = "lis_action_source_variable", schema = "lis")
 public class LisActionSourceVariable extends AbstractEntity {
 	private int lis_source_variable_fk;
 	private int lis_action_variable_connect_fk;

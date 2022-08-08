@@ -28,7 +28,7 @@ public class Equipment extends AbstractEntity {
 
 	@Override
 	public String toString() {
-		return "Equipment [id=" + id + ", equipmentName=" + equip + ", equipmentTypeId=" + equip_type_id
+		return "equipment.equipment [id=" + id + ", equipmentName=" + equip + ", equipmentTypeId=" + equip_type_id
 				+ ", description=" + description + ", model=" + model_id + ", fleet=" + fleet_id + ", equipmentSerialNumber="
 				+ mt_sn + ", equipmentIP=" + mt_ip + ", equipmentMAC=" + mt_mac
 				+ ", fuelLevel=" + fuel + ", gnss=" + gnss + ", tires=" + tires + ", costCenter=" + cost_center_id

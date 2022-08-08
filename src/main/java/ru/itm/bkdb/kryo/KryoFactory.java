@@ -8,7 +8,7 @@ import ru.itm.bkdb.entity.tables.drilling.Hole;
 import ru.itm.bkdb.entity.tables.drilling.HoleStatus;
 import ru.itm.bkdb.entity.tables.equipment.*;
 import ru.itm.bkdb.entity.tables.lis.*;
-import ru.itm.bkdb.entity.tables.location.Location;
+import ru.itm.bkdb.entity.tables.location.*;
 import ru.itm.bkdb.entity.tables.operator.Act;
 import ru.itm.bkdb.entity.tables.operator.ActToRole;
 import ru.itm.bkdb.entity.tables.operator.Role;
@@ -44,7 +44,7 @@ public abstract class KryoFactory {
         kryo.register(ActionVariableSource.class);
         kryo.register(LisAction.class);
         kryo.register(LisActionPredicate.class);
-        kryo.register(LisActionPredicateVarible.class);
+        kryo.register(LisActionPredicateVariable.class);
         kryo.register(LisActionSourceVariable.class);
         kryo.register(LisPredicate.class);
         kryo.register(LisSourceVariable.class);
@@ -52,10 +52,18 @@ public abstract class KryoFactory {
         kryo.register(LisActionVariable.class);
         kryo.register(LisConnection.class);
         kryo.register(LisPredicateVariable.class);
+        kryo.register(LisGroup.class);
+        kryo.register(LisPoint.class);
+        kryo.register(LisCheckFunction.class);
 
+        kryo.register(CoordinateLocation.class);
         kryo.register(Location.class);
+        kryo.register(LocationAutoStatus.class);
+        kryo.register(LocationInheritance.class);
+        kryo.register(LocationType.class);
+        kryo.register(Road.class);
+        kryo.register(SpeedLimits.class);
 
         return kryo;
     }
-
 }

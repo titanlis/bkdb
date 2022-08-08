@@ -19,7 +19,7 @@ public class ValuesData extends AbstractEntity {
 
 	@Override
 	public String toStringShow(){
-		return "[id=" + id + ", name =\'" + name + "\', value=\'" + value_data +"\', descr=\'"+ descr +"\']";
+		return "config.values_data [id=" + id + ", name =\'" + name + "\', value=\'" + value_data +"\', descr=\'"+ descr +"\']";
 	}
 	public ValuesData(){}
 

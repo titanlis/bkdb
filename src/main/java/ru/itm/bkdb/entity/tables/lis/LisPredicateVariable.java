@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "lis_predicate_varible", schema = "lis")
+@Table(name = "lis_predicate_variable", schema = "lis")
 public class LisPredicateVariable extends AbstractEntity {
 
 	@Column(name = "number_var")

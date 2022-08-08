@@ -21,7 +21,7 @@ public class EquipmentDrill extends AbstractEntity {
 
 	@Override
 	public String toString() {
-		return "Equipment [id=" + id + ", type=" + type + ", bx_shift=" + bx_shift
+		return "equipment.equipment_drill [id=" + id + ", type=" + type + ", bx_shift=" + bx_shift
 				+ ", by_shift=" + by_shift + ", bh=" + bh + ", H=" + h + ", bc="
 				+ bc + ", equip_id=" + equip_id + "]";
 	}

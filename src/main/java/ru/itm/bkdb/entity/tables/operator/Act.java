@@ -43,7 +43,7 @@ public class Act extends AbstractEntity {
 	}
 
 	public String toStringShow(){
-		return "[id=" + id + ", name=\'" + name + "\', descr=\'" + descr + "\', active=" + active+"]" ;
+		return "operator.act [id=" + id + ", name=\'" + name + "\', descr=\'" + descr + "\', active=" + active+"]" ;
 	}
 
 

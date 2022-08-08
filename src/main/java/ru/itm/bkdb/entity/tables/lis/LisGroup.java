@@ -13,7 +13,22 @@ public class LisGroup extends AbstractEntity {
 	public LisGroup(){}
 
 	@Override
+	public String toString() {
+		return "lis.lis_group{" +
+				"id=" + id +
+				", name=" + name + '}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

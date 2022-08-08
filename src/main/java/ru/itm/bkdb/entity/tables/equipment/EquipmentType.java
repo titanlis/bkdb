@@ -20,7 +20,7 @@ public class EquipmentType extends AbstractEntity {
 
 	@Override
 	public String toStringShow() {
-		return "Equipment [id=" + id + ", name=" + name + ", descr=" + descr
+		return "equipment.equip_type [id=" + id + ", name=" + name + ", descr=" + descr
 				+ ", active=" + active + "]";
 	}
 

@@ -105,7 +105,7 @@ public class Location extends AbstractEntity {
 
 	@Override
 	public String toStringShow(){
-		return "[id=" + id + ", name=\'" + name +"\', description=\'" + description + "\' ....]" ;
+		return "location.location [id=" + id + ", name=\'" + name +"\', description=\'" + description + "\' ....]" ;
 	}
 
 }

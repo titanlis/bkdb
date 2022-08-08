@@ -28,7 +28,7 @@ public class Request {
             /**Возвращаeтся серилизованная таблица с именем*/
             ResponseEntity<DBModelContainer> response
                     = restTemplate.getForEntity( url, DBModelContainer.class );
-            logger.info("Ответ. Обновление пришло :\t " + response.getBody());
+            logger.info("Response. The update came :\t " + response.getBody());
             return response.getBody();
         } catch (ResourceAccessException e) {
             logger.error("Connect exception \'" + url +"\'");

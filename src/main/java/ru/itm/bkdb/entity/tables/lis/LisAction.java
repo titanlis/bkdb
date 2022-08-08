@@ -15,7 +15,7 @@ public class LisAction extends AbstractEntity {
 	public LisAction(){}
 
 	public String toStringShow() {
-		return "ActionGroup [id=" + id + ", name=" + name + ", text=" + description + "]";
+		return "lis.lis_action [id=" + id + ", name=" + name + ", text=" + description + "]";
 	}
 
 	public String getName() {

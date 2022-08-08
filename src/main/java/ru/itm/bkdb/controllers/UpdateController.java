@@ -137,11 +137,11 @@ public class UpdateController {
             /**Возвращаются пары с именами таблиц и версиями, которые новее*/
             ResponseEntity<MultiValueMap> response
                     = restTemplate.postForEntity( urlFull, request , MultiValueMap.class );
-            logger.info("Ответ. Начинаем обновление этих таблиц :\n\t " + response.getBody());
+            logger.info("Response. Begin updating these tables :\n\t " + response.getBody());
 
             response.getBody().keySet().stream().forEach(tableName-> {
                         String tableNameResponse = String.valueOf(tableName).toLowerCase();
-                        System.out.println("Обновляем " + tableNameResponse);
+                        System.out.println("\nUpdate the table : " + tableNameResponse);
                         System.out.println("http://" + serverUrl + "/api/v1/"
                                 + ipAddressBk.getIp() + "/update/" + tableName);
 
@@ -189,7 +189,7 @@ public class UpdateController {
                                 updateVersion(tableVersions,
                                         tableNameResponse,
                                         Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
-                                logger.info("База " + tableName + " обновлена");
+                                logger.info("Table \'" + tableName + "\'  has been updated.");
                             }
                             else{
                                 listTableNameNoUpdates.add(tableNameResponse);
@@ -202,13 +202,13 @@ public class UpdateController {
 
         } catch (ResourceAccessException e) {
             logger.error("Connect exception \'" + urlFull +"\'");
-            logger.info("Ожидаем выхода из offline");
+            logger.info("Waiting to go offline");
         }
         if(listTableNameNoUpdates.isEmpty()){
-            logger.info("Все базы обновлены");
+            logger.info("All tables have been updated");
         }
         else {
-            logger.info("Базы не обновлены:");
+            logger.info("These tables are not updated : ");
             listTableNameNoUpdates.stream().forEach(t->logger.info(t));
         }
     }
