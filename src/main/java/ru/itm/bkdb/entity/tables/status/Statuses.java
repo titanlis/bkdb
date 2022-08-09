@@ -30,7 +30,16 @@ public class Statuses extends AbstractEntity {
 	}
 
 	@Override
+	public String toString() {
+		return "status.statuses{" +
+				"id=" + id +
+				", name=" + name +
+				", ext_id=" + ext_id +
+				'}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
 	}
 }

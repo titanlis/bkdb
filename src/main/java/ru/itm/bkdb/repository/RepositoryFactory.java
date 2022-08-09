@@ -18,6 +18,8 @@ import ru.itm.bkdb.repository.sensor.SensorDataTypeRepository;
 import ru.itm.bkdb.repository.sensor.SensorInclineCalibrationRepository;
 import ru.itm.bkdb.repository.sensor.SensorRepository;
 import ru.itm.bkdb.repository.sensor.SensorTypeRepository;
+import ru.itm.bkdb.repository.shift.ShiftRepository;
+import ru.itm.bkdb.repository.status.*;
 
 @Component
 public class RepositoryFactory {
@@ -66,6 +68,59 @@ public class RepositoryFactory {
     private static SensorInclineCalibrationRepository sensorInclineCalibrationRepository;
     private static SensorDataTypeRepository sensorDataTypeRepository;
     private static SensorRepository sensorRepository;
+    private static ShiftRepository shiftRepository;
+    private static StatusesRepository statusesRepository;
+    private static StatusCategoryRepository statusCategoryRepository;
+    private static StatusCatLocationRelRepository statusCatLocationRelRepository;
+    private static StatusGroupRepository statusGroupRepository;
+    private static StatusGroupRelationRepository statusGroupRelationRepository;
+    private static StatusInheritanceRepository statusInheritanceRepository;
+    private static RoutesRepository routesRepository;
+    private static RoutesRoadsRepository routesRoadsRepository;
+
+    @Autowired
+    public void setRoutesRoadsRepository(RoutesRoadsRepository routesRoadsRepository) {
+        RepositoryFactory.routesRoadsRepository = routesRoadsRepository;
+    }
+
+    @Autowired
+    public void setRoutesRepository(RoutesRepository routesRepository) {
+        RepositoryFactory.routesRepository = routesRepository;
+    }
+    @Autowired
+    public void setStatusInheritanceRepository(StatusInheritanceRepository statusInheritanceRepository) {
+        RepositoryFactory.statusInheritanceRepository = statusInheritanceRepository;
+    }
+
+    @Autowired
+    public void setStatusGroupRelationRepository(StatusGroupRelationRepository statusGroupRelationRepository) {
+        RepositoryFactory.statusGroupRelationRepository = statusGroupRelationRepository;
+    }
+
+    @Autowired
+    public void setStatusGroupRepository(StatusGroupRepository statusGroupRepository) {
+        RepositoryFactory.statusGroupRepository = statusGroupRepository;
+    }
+
+    @Autowired
+    public void setStatusCatLocationRelRepository(StatusCatLocationRelRepository statusCatLocationRelRepository) {
+        RepositoryFactory.statusCatLocationRelRepository = statusCatLocationRelRepository;
+    }
+
+    @Autowired
+    public void setStatusCategoryRepository(StatusCategoryRepository statusCategoryRepository) {
+        RepositoryFactory.statusCategoryRepository = statusCategoryRepository;
+    }
+
+    @Autowired
+    public void setStatusesRepository(StatusesRepository statusesRepository) {
+        RepositoryFactory.statusesRepository = statusesRepository;
+    }
+
+    @Autowired
+    public void setShiftRepository(ShiftRepository shiftRepository) {
+        RepositoryFactory.shiftRepository = shiftRepository;
+    }
 
     @Autowired
     public void setSensorRepository(SensorRepository sensorRepository) {
@@ -329,6 +384,15 @@ public class RepositoryFactory {
             case "sensor_inclin_calibration" -> sensorInclineCalibrationRepository;
             case "sensor_data_types" -> sensorDataTypeRepository;
             case "sensors" -> sensorRepository;
+            case "shifts" -> shiftRepository;
+            case "statuses" -> statusesRepository;
+            case "status_cat" -> statusCategoryRepository;
+            case "status_cat_location_rel" -> statusCatLocationRelRepository;
+            case "status_group" -> statusGroupRepository;
+            case "status_group_rel" -> statusGroupRelationRepository;
+            case "status_inh" -> statusInheritanceRepository;
+            case "routes" -> routesRepository;
+            case "routes_roads" -> routesRoadsRepository;
 
             default ->  null;
         };

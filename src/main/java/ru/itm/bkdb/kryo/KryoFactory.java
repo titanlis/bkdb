@@ -17,6 +17,10 @@ import ru.itm.bkdb.entity.tables.sensor.Sensor;
 import ru.itm.bkdb.entity.tables.sensor.SensorDataType;
 import ru.itm.bkdb.entity.tables.sensor.SensorInclineCalibration;
 import ru.itm.bkdb.entity.tables.sensor.SensorType;
+import ru.itm.bkdb.entity.tables.shift.Shift;
+import ru.itm.bkdb.entity.tables.status.*;
+
+import java.sql.Timestamp;
 
 public abstract class KryoFactory {
 
@@ -65,6 +69,8 @@ public abstract class KryoFactory {
         kryo.register(LocationInheritance.class);
         kryo.register(LocationType.class);
         kryo.register(Road.class);
+        kryo.register(Routes.class);
+        kryo.register(RoutesRoads.class);
         kryo.register(SpeedLimits.class);
 
         kryo.register(MaterialType.class);
@@ -83,6 +89,15 @@ public abstract class KryoFactory {
         kryo.register(SensorDataType.class);
         kryo.register(Sensor.class);
 
+        kryo.register(Shift.class);
+        kryo.register(Timestamp.class);
+
+        kryo.register(Statuses.class);
+        kryo.register(StatusCategory.class);
+        kryo.register(StatusCatLocationRel.class);
+        kryo.register(StatusGroup.class);
+        kryo.register(StatusGroupRelation.class);
+        kryo.register(StatusInheritance.class);
 
         return kryo;
     }
