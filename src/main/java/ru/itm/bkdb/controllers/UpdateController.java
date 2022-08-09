@@ -244,7 +244,7 @@ public class UpdateController {
         t.setTableVersion(newVersion);
         /**Обновим строку в базе*/
         tablesService.save(t);
-        logger.info(tableName + " = " + newVersion + " TableVersions в базе обновили");
+        logger.info(tableName + " = " + newVersion + " in (TableVersion). The version of the table in the database has been updated.");
     }
 
     private <T> CommonRepository updateTable(DBModelContainer dbModelContainer,
@@ -258,7 +258,7 @@ public class UpdateController {
             });
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Надо бы создать таблицу");
+            System.out.println("Problem with the table.");
         }
         return RepositoryFactory.getRepo(tableNameResponse);
     }

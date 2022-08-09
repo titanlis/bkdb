@@ -35,6 +35,7 @@ public class ActToRole extends AbstractEntity {
 		this.role_id = role_id;
 	}
 
+	@Override
 	public String toStringShow(){
 		return "operator.acts_to_roles [id=" + id + ", act_id =\'" + act_id + "\', role_id=\'" + role_id +"]" ;
 	}

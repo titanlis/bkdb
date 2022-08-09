@@ -9,10 +9,27 @@ import javax.persistence.Table;
 @Table(name = "sensor_types", schema = "sensor")
 public final class SensorType extends AbstractEntity {
 	private String name;
+
 	public SensorType(){}
 
 	@Override
+	public String toString() {
+		return "sensor.sensor_types{" +
+				"id=" + id +
+				", name=" + name +
+				'}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

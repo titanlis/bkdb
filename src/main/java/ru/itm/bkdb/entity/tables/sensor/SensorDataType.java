@@ -12,7 +12,23 @@ public final class SensorDataType extends AbstractEntity {
 	public SensorDataType(){}
 
 	@Override
+	public String toString() {
+		return "LisType{" +
+				"id=" + id +
+				", name=" + name +
+				'}';
+	}
+
+	@Override
 	public String toStringShow() {
-		return null;
+		return this.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

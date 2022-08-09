@@ -10,9 +10,14 @@ import ru.itm.bkdb.repository.drilling.HoleStatusRepository;
 import ru.itm.bkdb.repository.equipment.*;
 import ru.itm.bkdb.repository.lis.*;
 import ru.itm.bkdb.repository.location.*;
-import ru.itm.bkdb.repository.operator.ActRepository;
-import ru.itm.bkdb.repository.operator.ActToRoleRepository;
-import ru.itm.bkdb.repository.operator.RoleRepository;
+import ru.itm.bkdb.repository.material.MaterialConversationRepository;
+import ru.itm.bkdb.repository.material.MaterialRepository;
+import ru.itm.bkdb.repository.material.MaterialTypeRepository;
+import ru.itm.bkdb.repository.operator.*;
+import ru.itm.bkdb.repository.sensor.SensorDataTypeRepository;
+import ru.itm.bkdb.repository.sensor.SensorInclineCalibrationRepository;
+import ru.itm.bkdb.repository.sensor.SensorRepository;
+import ru.itm.bkdb.repository.sensor.SensorTypeRepository;
 
 @Component
 public class RepositoryFactory {
@@ -50,6 +55,66 @@ public class RepositoryFactory {
     private static LocationTypeRepository locationTypeRepository;
     private static RoadRepository roadRepository;
     private static SpeedLimitsRepository speedLimitsRepository;
+    private static MaterialTypeRepository materialTypeRepository;
+    private static MaterialConversationRepository materialConversationRepository;
+    private static MaterialRepository materialRepository;
+    private static OperatorRepository operatorRepository;
+    private static OperatorOnEquipRepository operatorOnEquipRepository;
+    private static OperatorOnEquipTypeRepository operatorOnEquipTypeRepository;
+
+    private static SensorTypeRepository sensorTypeRepository;
+    private static SensorInclineCalibrationRepository sensorInclineCalibrationRepository;
+    private static SensorDataTypeRepository sensorDataTypeRepository;
+    private static SensorRepository sensorRepository;
+
+    @Autowired
+    public void setSensorRepository(SensorRepository sensorRepository) {
+        RepositoryFactory.sensorRepository = sensorRepository;
+    }
+
+    @Autowired
+    public void setSensorDataTypeRepository(SensorDataTypeRepository sensorDataTypeRepository) {
+        RepositoryFactory.sensorDataTypeRepository = sensorDataTypeRepository;
+    }
+
+    @Autowired
+    public void setSensorInclineCalibrationRepository(SensorInclineCalibrationRepository sensorInclineCalibrationRepository) {
+        RepositoryFactory.sensorInclineCalibrationRepository = sensorInclineCalibrationRepository;
+    }
+
+    @Autowired
+    public void setSensorTypeRepository(SensorTypeRepository sensorTypeRepository) {
+        RepositoryFactory.sensorTypeRepository = sensorTypeRepository;
+    }
+
+    @Autowired
+    public void setOperatorOnEquipTypeRepository(OperatorOnEquipTypeRepository operatorOnEquipTypeRepository) {
+        RepositoryFactory.operatorOnEquipTypeRepository = operatorOnEquipTypeRepository;
+    }
+
+    @Autowired
+    public void setOperatorOnEquipRepository(OperatorOnEquipRepository operatorOnEquipRepository) {
+        RepositoryFactory.operatorOnEquipRepository = operatorOnEquipRepository;
+    }
+
+    @Autowired
+    public void setOperatorRepository(OperatorRepository operatorRepository) {
+        RepositoryFactory.operatorRepository = operatorRepository;
+    }
+
+    @Autowired
+    public void setMaterialRepository(MaterialRepository materialRepository) {
+        RepositoryFactory.materialRepository = materialRepository;
+    }
+
+    @Autowired
+    public void setMaterialConversationRepository(MaterialConversationRepository materialConversationRepository) {
+        RepositoryFactory.materialConversationRepository = materialConversationRepository;
+    }
+    @Autowired
+    public void setMaterialTypeRepository(MaterialTypeRepository materialTypeRepository) {
+        RepositoryFactory.materialTypeRepository = materialTypeRepository;
+    }
 
     @Autowired
     public void setSpeedLimitsRepository(SpeedLimitsRepository speedLimitsRepository) {
@@ -219,112 +284,54 @@ public class RepositoryFactory {
 
     public static CommonRepository getRepo(String tableName){
 
-        switch (tableName.toLowerCase()){
-            case "acts" -> {
-                return actRepository;
-            }
-            case "acts_to_roles" -> {
-                return actToRoleRepository;
-            }
-            case "roles" -> {
-                return roleRepository;
-            }
-            case "values_data" -> {
-                return valuesDataRepository;
-            }
-            case "dispatcher" -> {
-                return dispatcherRepository;
-            }
-            case "holes" -> {
-                return holeRepository;
-            }
-            case "hole_status" -> {
-                return holeStatusRepository;
-            }
-            case "equipment" -> {
-                return equipmentRepository;
-            }
-            case "equipment_drill" -> {
-                return equipmentDrillRepository;
-            }
-            case "equipment_haul" -> {
-                return equipmentHaulRepository;
-            }
-            case "equipment_load" -> {
-                return equipmentLoadRepository;
-            }
-            case "equip_type" -> {
-                return equipmentTypeRepository;
-            }
-            case "action_group" -> {
-                return actionGroupRepository;
-            }
-            case "action_variable_source" -> {
-                return actionVariableSourceRepository;
-            }
-            case "lis_action" -> {
-                return lisActionRepository;
-            }
-            case "lis_action_predicate" -> {
-                return lisActionPredicateRepository;
-            }
-            case "lis_action_predicate_variable" -> {
-                return lisActionPredicateVariableRepository;
-            }
-            case "lis_action_source_variable" -> {
-                return lisActionSourceVariableRepository;
-            }
-            case "lis_predicate" -> {
-                return lisPredicateRepository;
-            }
-            case "lis_source_variable" -> {
-                return lisSourceVariableRepository;
-            }
-            case "lis_type" -> {
-                return lisTypeRepository;
-            }
-            case "lis_action_variable" -> {
-                return lisActionVariableRepository;
-            }
-            case "lis_connection" -> {
-                return lisConnectionRepository;
-            }
-            case "lis_predicate_variable" -> {
-                return lisPredicateVariableRepository;
-            }
-            case "lis_group" -> {
-                return lisGroupRepository;
-            }
-            case "lis_point" -> {
-                return lisPointRepository;
-            }
-            case "lis_check_function" -> {
-                return lisCheckFunctionRepository;
-            }
-            case "coord_loc" -> {
-                return coordinateLocationRepository;
-            }
-            case "location" -> {
-                return locationRepository;
-            }
-            case "location_auto_status" -> {
-                return locationAutoStatusRepository;
-            }
-            case "loc_inheritance" -> {
-                return locationInheritanceRepository;
-            }
-            case "location_type" -> {
-                return locationTypeRepository;
-            }
-            case "roads" -> {
-                return roadRepository;
-            }
-            case "speed_limits" -> {
-                return speedLimitsRepository;
-            }
+        return switch (tableName.toLowerCase()){
+            case "acts"          -> actRepository;
+            case "acts_to_roles" -> actToRoleRepository;
+            case "roles"         -> roleRepository;
+            case "values_data"   -> valuesDataRepository;
+            case "dispatcher"    -> dispatcherRepository;
+            case "holes"         -> holeRepository;
+            case "hole_status"   -> holeStatusRepository;
+            case "equipment"     -> equipmentRepository;
+            case "equipment_drill" -> equipmentDrillRepository;
+            case "equipment_haul"  -> equipmentHaulRepository;
+            case "equipment_load"  -> equipmentLoadRepository;
+            case "equip_type"      -> equipmentTypeRepository;
+            case "action_group"    -> actionGroupRepository;
+            case "action_variable_source" -> actionVariableSourceRepository;
+            case "lis_action"      -> lisActionRepository;
+            case "lis_action_predicate" -> lisActionPredicateRepository;
+            case "lis_action_predicate_variable" -> lisActionPredicateVariableRepository;
+            case "lis_action_source_variable" -> lisActionSourceVariableRepository;
+            case "lis_predicate"          -> lisPredicateRepository;
+            case "lis_source_variable"    -> lisSourceVariableRepository;
+            case "lis_type"               -> lisTypeRepository;
+            case "lis_action_variable"    -> lisActionVariableRepository;
+            case "lis_connection"         -> lisConnectionRepository;
+            case "lis_predicate_variable" -> lisPredicateVariableRepository;
+            case "lis_group" -> lisGroupRepository;
+            case "lis_point" -> lisPointRepository;
+            case "lis_check_function" -> lisCheckFunctionRepository;
+            case "coord_loc" -> coordinateLocationRepository;
+            case "location" -> locationRepository;
+            case "location_auto_status" -> locationAutoStatusRepository;
+            case "loc_inheritance" -> locationInheritanceRepository;
+            case "location_type" -> locationTypeRepository;
+            case "roads" -> roadRepository;
+            case "speed_limits" -> speedLimitsRepository;
+            case "material_type" -> materialTypeRepository;
+            case "material_conv" -> materialConversationRepository;
+            case "material" -> materialRepository;
+            case "operators" -> operatorRepository;
+            case "operator_on_equip" -> operatorOnEquipRepository;
+            case "operator_on_equip_type" -> operatorOnEquipTypeRepository;
+            case "sensor_types" -> sensorTypeRepository;
+            case "sensor_inclin_calibration" -> sensorInclineCalibrationRepository;
+            case "sensor_data_types" -> sensorDataTypeRepository;
+            case "sensors" -> sensorRepository;
 
-            default -> { return  null; }
-        }
+            default ->  null;
+        };
     }
 
 }

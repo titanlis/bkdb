@@ -9,9 +9,14 @@ import ru.itm.bkdb.entity.tables.drilling.HoleStatus;
 import ru.itm.bkdb.entity.tables.equipment.*;
 import ru.itm.bkdb.entity.tables.lis.*;
 import ru.itm.bkdb.entity.tables.location.*;
-import ru.itm.bkdb.entity.tables.operator.Act;
-import ru.itm.bkdb.entity.tables.operator.ActToRole;
-import ru.itm.bkdb.entity.tables.operator.Role;
+import ru.itm.bkdb.entity.tables.material.Material;
+import ru.itm.bkdb.entity.tables.material.MaterialConversation;
+import ru.itm.bkdb.entity.tables.material.MaterialType;
+import ru.itm.bkdb.entity.tables.operator.*;
+import ru.itm.bkdb.entity.tables.sensor.Sensor;
+import ru.itm.bkdb.entity.tables.sensor.SensorDataType;
+import ru.itm.bkdb.entity.tables.sensor.SensorInclineCalibration;
+import ru.itm.bkdb.entity.tables.sensor.SensorType;
 
 public abstract class KryoFactory {
 
@@ -27,9 +32,7 @@ public abstract class KryoFactory {
 
     protected Kryo createKryo() {
         Kryo kryo = new Kryo();
-        kryo.register(Act.class);
-        kryo.register(ActToRole.class);
-        kryo.register(Role.class);
+
         kryo.register(ValuesData.class);
         kryo.register(Dispatcher.class);
         kryo.register(Hole.class);
@@ -63,6 +66,23 @@ public abstract class KryoFactory {
         kryo.register(LocationType.class);
         kryo.register(Road.class);
         kryo.register(SpeedLimits.class);
+
+        kryo.register(MaterialType.class);
+        kryo.register(MaterialConversation.class);
+        kryo.register(Material.class);
+
+        kryo.register(Act.class);
+        kryo.register(ActToRole.class);
+        kryo.register(Operator.class);
+        kryo.register(OperatorOnEquip.class);
+        kryo.register(OperatorOnEquipType.class);
+        kryo.register(Role.class);
+
+        kryo.register(SensorType.class);
+        kryo.register(SensorInclineCalibration.class);
+        kryo.register(SensorDataType.class);
+        kryo.register(Sensor.class);
+
 
         return kryo;
     }
