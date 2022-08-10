@@ -109,6 +109,8 @@ public class UpdateController {
         /**Для имен таблиц, которые не обновились*/
         List<String> listTableNameNoUpdates = new ArrayList<>();
 
+        Boolean online = true;
+
 
         /**Читаем все данные по версиям из базы в лист*/
         List<TableVersion> tableVersions = tablesService.findAll();
@@ -138,64 +140,43 @@ public class UpdateController {
             ResponseEntity<MultiValueMap> response
                     = restTemplate.postForEntity( urlFull, request , MultiValueMap.class );
             logger.info("Response. Begin updating these tables :\n\t " + response.getBody());
+            online = true;
 
-            response.getBody().keySet().stream().forEach(tableName-> {
-                        String tableNameResponse = String.valueOf(tableName).toLowerCase();
-                        System.out.println("\nUpdate the table : " + tableNameResponse);
-                        System.out.println("http://" + serverUrl + "/api/v1/"
-                                + ipAddressBk.getIp() + "/update/" + tableName);
+            if(response.hasBody()){
+                response.getBody().keySet().stream().forEach(tableName-> {
+                    String tableNameResponse = String.valueOf(tableName).toLowerCase();
+                    System.out.println("\nUpdate the table : " + tableNameResponse);
+                    System.out.println("http://" + serverUrl + "/api/v1/"
+                            + ipAddressBk.getIp() + "/update/" + tableName);
 
-                        DBModelContainer dbModelContainer = Request.get("http://" + serverUrl + "/api/v1/"
-                                + ipAddressBk.getIp() + "/update/" + tableName);
+                    DBModelContainer dbModelContainer = Request.get("http://" + serverUrl + "/api/v1/"
+                            + ipAddressBk.getIp() + "/update/" + tableName);
 
-                        if(dbModelContainer!=null){
-                            List<AbstractEntity> abstractEntityList = new ArrayList<>();
-                            commonRepository = this.updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                            switch (tableNameResponse) {
-//                                case "acts" -> {
-//                                    commonRepository = this.<Act>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "acts_to_roles" -> {
-//                                    commonRepository = this.<ActToRole>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "roles" -> {
-//                                    commonRepository = this.<Role>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "values_data" -> {
-//                                    commonRepository = this.<ValuesData>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "dispatcher" -> {
-//                                    commonRepository = this.<Dispatcher>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "location" -> {
-//                                    commonRepository = this.<Location>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "holes" -> {
-//                                    commonRepository = this.<Hole>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                case "hole_status" -> {
-//                                    commonRepository = this.<HoleStatus>updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
-//                                }
-//                                default -> logger.info("No table to update was found.");
-//                            }
-                            if(!abstractEntityList.isEmpty()){
-                                try {
-                                    commonRepository.deleteAll();
-                                }catch (DataIntegrityViolationException ex){
-                                    System.out.println("Delete exception : " + ex);
-                                }
-
-                                commonRepository.saveAll(abstractEntityList);
-                                updateVersion(tableVersions,
-                                        tableNameResponse,
-                                        Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
-                                logger.info("Table \'" + tableName + "\'  has been updated.");
+                    if(dbModelContainer!=null){
+                        List<AbstractEntity> abstractEntityList = new ArrayList<>();
+                        commonRepository = this.updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
+                        if(!abstractEntityList.isEmpty()){
+                            try {
+                                commonRepository.deleteAll();
+                            }catch (DataIntegrityViolationException ex){
+                                System.out.println("Delete exception : " + ex);
                             }
-                            else{
-                                listTableNameNoUpdates.add(tableNameResponse);
-                            }
+
+                            commonRepository.saveAll(abstractEntityList);
+                            updateVersion(tableVersions,
+                                    tableNameResponse,
+                                    Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
+                            logger.info("Table \'" + tableName + "\'  has been updated.");
                         }
-                    });
+                        else{
+                            listTableNameNoUpdates.add(tableNameResponse);
+                        }
+                    }
+                });
+            }
+            else{
+                logger.info("There are no updates.");
+            }
 
             /**После обновления устанавливаем время следующего планового обновления*/
             nextUpdateTime = nextUpdateTime.plusSeconds(period);
@@ -203,13 +184,19 @@ public class UpdateController {
         } catch (ResourceAccessException e) {
             logger.error("Connect exception \'" + urlFull +"\'");
             logger.info("Waiting to go offline");
+            online = false;
         }
-        if(listTableNameNoUpdates.isEmpty()){
-            logger.info("All tables have been updated");
+        if(online){
+            if(listTableNameNoUpdates.isEmpty()){
+                logger.info("All tables have been updated");
+            }
+            else {
+                logger.info("These tables are not updated : ");
+                listTableNameNoUpdates.stream().forEach(t->logger.info(t));
+            }
         }
-        else {
-            logger.info("These tables are not updated : ");
-            listTableNameNoUpdates.stream().forEach(t->logger.info(t));
+        else{
+            nextUpdateTime = Instant.now();
         }
     }
 
