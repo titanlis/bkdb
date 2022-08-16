@@ -12,6 +12,7 @@ public class HoleStatus extends AbstractEntity {
 	private String descr;
 	private String color;
 
+	@Override
 	public String toStringShow(){
 		return "[id=" + id + ", name=\'" + name +"\', descr=\'" + descr + "\', color=\'" + color + "\']" ;
 	}
