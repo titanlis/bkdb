@@ -13,7 +13,7 @@ public class LisPredicate extends AbstractEntity {
 	private String description;
 	private String type;
 	
-	//@Column(name = "func", columnDefinition = "text")
+	@Column(name = "func", columnDefinition = "text")
 	private String func;
 
 	public LisPredicate(){}

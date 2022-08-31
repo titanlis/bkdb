@@ -4,7 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -17,33 +18,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
+import ru.itm.bkdb.config.SystemConfig;
 import ru.itm.bkdb.entity.AbstractEntity;
+import ru.itm.bkdb.entity.MessageStatus;
 import ru.itm.bkdb.entity.TableVersion;
-import ru.itm.bkdb.entity.tables.config.ValuesData;
-import ru.itm.bkdb.entity.tables.dispatcher.Dispatcher;
-import ru.itm.bkdb.entity.tables.drilling.Hole;
-import ru.itm.bkdb.entity.tables.drilling.HoleStatus;
-import ru.itm.bkdb.entity.tables.location.Location;
-import ru.itm.bkdb.entity.tables.operator.Act;
-import ru.itm.bkdb.entity.tables.operator.ActToRole;
-import ru.itm.bkdb.entity.tables.operator.Role;
 import ru.itm.bkdb.kryo.KryoSerializer;
 import ru.itm.bkdb.network.Request;
 import ru.itm.bkdb.network.config.IpAddressBk;
 import ru.itm.bkdb.repository.CommonRepository;
 import ru.itm.bkdb.repository.RepositoryFactory;
-import ru.itm.bkdb.repository.config.ValuesDataRepository;
-import ru.itm.bkdb.repository.dispatcher.DispatcherRepository;
-import ru.itm.bkdb.repository.drilling.HoleRepository;
-import ru.itm.bkdb.repository.drilling.HoleStatusRepository;
-import ru.itm.bkdb.repository.location.LocationRepository;
-import ru.itm.bkdb.repository.operator.*;
 import ru.itm.bkdb.serivce.TablesService;
 import ru.itm.bkdb.udp.DBModelContainer;
 
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -78,8 +68,65 @@ public class UpdateController {
     @Value("${period.update}")
     private long period;
 
+    /**Сервис запущен через init?*/
+    @Value("${init}")
+    private boolean init;
+
+    /**Url актуатора init?*/
+    @Value("${init.actuator.url}")
+    private String initActuatorUrl;
+
+
+
     private CommonRepository commonRepository;
 
+
+    /**
+     * Автозапуск после создания контекста
+     */
+    @EventListener(ApplicationReadyEvent.class)
+    private void startIni(){
+        initActuatorUrl = "http://localhost:10056/actuator/health";
+        System.out.println("init = " + init);
+        if(init){
+            /**Раз в 20 сек пингуем инит. Если он вылетел, то выключаем сервис.*/
+            Runnable task = () -> {
+                logger.info("InitPing started");
+                while(!SystemConfig.isNeedStop()){
+                    try {
+                        TimeUnit.SECONDS.sleep(20L);
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
+                    }
+                    if(isInitActive()){
+                        System.out.println("ping init OK!");
+                    }
+                    else{
+                        System.out.println("ping init BAD!");
+                        break;
+                    }
+                }
+                logger.info("InitPing closed");
+                try{
+                    exit();
+                }catch (IllegalStateException ex){
+                    logger.info("--- init is closed ---");
+                }
+
+            };
+            Thread thread = new Thread(task);
+            thread.start();
+        }
+    }
+
+    private boolean isInitActive(){
+        System.out.println("ping init");
+        try{
+            MessageStatus messageStatus = Request.getMessageStatus(initActuatorUrl);
+            return messageStatus.getStatus().toLowerCase().equals("up");
+        }catch (ResourceAccessException e){}
+        return false;
+    }
 
     /**
      * Запускается с задержкой 10с проверка необходимости обновления баз
@@ -156,11 +203,11 @@ public class UpdateController {
                         List<AbstractEntity> abstractEntityList = new ArrayList<>();
                         commonRepository = this.updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
                         if(!abstractEntityList.isEmpty()){
-                            try {
-                                commonRepository.deleteAll();
-                            }catch (DataIntegrityViolationException ex){
-                                System.out.println("Delete exception : " + ex);
-                            }
+//                            try {
+//                                commonRepository.deleteAll();
+//                            }catch (DataIntegrityViolationException ex){
+//                                System.out.println("Delete exception : " + ex);
+//                            }
 
                             commonRepository.saveAll(abstractEntityList);
                             updateVersion(tableVersions,
@@ -248,6 +295,10 @@ public class UpdateController {
             System.out.println("Problem with the table.");
         }
         return RepositoryFactory.getRepo(tableNameResponse);
+    }
+
+    private void exit() {
+        new ShutdownManager().stopPage();
     }
 
 }

@@ -11,6 +11,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import ru.itm.bkdb.controllers.UpdateController;
+import ru.itm.bkdb.entity.MessageStatus;
 import ru.itm.bkdb.udp.DBModelContainer;
 
 @Component
@@ -35,4 +36,18 @@ public class Request {
         }
         return null;
     }
+
+
+    public static MessageStatus getMessageStatus(String url){
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        /**Создаем get запрос и отправляем пары на сервер*/
+        HttpEntity<String> request = new HttpEntity<String>("");
+        ResponseEntity<MessageStatus> response
+                = restTemplate.getForEntity( url, MessageStatus.class );
+        logger.info("Response. The update came :\t " + response.getBody());
+        return response.getBody();
+    }
+
 }

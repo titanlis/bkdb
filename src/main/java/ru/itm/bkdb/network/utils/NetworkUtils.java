@@ -1,5 +1,9 @@
 package ru.itm.bkdb.network.utils;
 
+import org.springframework.beans.factory.annotation.Value;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -15,6 +19,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * @brief статические сетевые утилиты
  */
 public class NetworkUtils {
+
+    private static String currentSerial = null;
+
+    @Value("${server.system_password}")
+    private static String systemPassword;
 
     private final static String zeroIp = "0.0.0.0";
     private final static String zeroMac = "00:00:00:00:00:00";
@@ -134,5 +143,34 @@ public class NetworkUtils {
         return NetworkUtils.getActiveInterfacesIPv4().stream().filter(nI -> nI.getIp().equals(ip)).findAny().isPresent();
     }
 
+
+    public String getSystemSerialNumberLinux() {
+        if (currentSerial == null) {
+            Process p = null;
+            try {
+                p = Runtime.getRuntime().exec(new String[] {"/bin/bash","-c","echo " + systemPassword + " | sudo -S dmidecode -s system-serial-number"});
+                try (BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));) {
+                    String s = null;
+                    while ((s = br.readLine()) != null) {
+                        p.waitFor();
+                        if (!s.equals(" ")) {
+                            currentSerial = s;
+                            //System.out.println("currentSerial" + currentSerial);
+                            return currentSerial;
+                        }else {
+                            break;
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (p != null) {
+                    p.destroy();
+                }
+            }
+        }
+        return currentSerial;
+    }
 
 }
