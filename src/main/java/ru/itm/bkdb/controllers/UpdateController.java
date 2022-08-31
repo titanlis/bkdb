@@ -115,6 +115,7 @@ public class UpdateController {
 
             };
             Thread thread = new Thread(task);
+            thread.setDaemon(true); //сработает даже без daemon, но так проще
             thread.start();
         }
     }
