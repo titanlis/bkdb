@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -22,6 +23,7 @@ import ru.itm.bkdb.config.SystemConfig;
 import ru.itm.bkdb.entity.AbstractEntity;
 import ru.itm.bkdb.entity.MessageStatus;
 import ru.itm.bkdb.entity.TableVersion;
+import ru.itm.bkdb.kryo.CompressObject;
 import ru.itm.bkdb.kryo.KryoSerializer;
 import ru.itm.bkdb.network.Request;
 import ru.itm.bkdb.network.config.IpAddressBk;
@@ -30,6 +32,7 @@ import ru.itm.bkdb.repository.RepositoryFactory;
 import ru.itm.bkdb.serivce.TablesService;
 import ru.itm.bkdb.udp.DBModelContainer;
 
+import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,8 +79,6 @@ public class UpdateController {
     @Value("${init.actuator.url}")
     private String initActuatorUrl;
 
-
-
     private CommonRepository commonRepository;
 
 
@@ -98,6 +99,7 @@ public class UpdateController {
                     } catch (InterruptedException ex) {
                         ex.printStackTrace();
                     }
+                    System.out.print("BCUpdate : isInitActive() ... ");
                     if(isInitActive()){
                         System.out.println("ping init OK!");
                     }
@@ -172,7 +174,7 @@ public class UpdateController {
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);//.APPLICATION_FORM_URLENCODED);
 
         /**Создаем пары для отправки "имя таблицы"-"версия"*/
         MultiValueMap<String, Integer> map = new LinkedMultiValueMap();
@@ -181,39 +183,55 @@ public class UpdateController {
         });
 
         String urlFull = "http://" + serverUrl+"/api/v1/" + ipAddressBk.getIp() + "/gettabversions";
-        /**Создаем post запрос и отправляем пары на сервер*/
+
+        /**Массив для сжатой gzip мэпой с именами и версиями таблиц*/
+        byte[] arrayAllTab = new byte[0];
         try {
-            HttpEntity<MultiValueMap<String, Integer>> request = new HttpEntity<MultiValueMap<String, Integer>>(map, headers);
-            /**Возвращаются пары с именами таблиц и версиями, которые новее*/
-            ResponseEntity<MultiValueMap> response
-                    = restTemplate.postForEntity( urlFull, request , MultiValueMap.class );
-            logger.info("Response. Begin updating these tables :\n\t " + response.getBody());
+            arrayAllTab = CompressObject.writeCompressObject(map);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        /**Создаем post запрос и отправляем массив байт с парами (имя, версия) на сервер*/
+        try {
+
+            HttpEntity<byte[]> request = new HttpEntity<>(arrayAllTab, headers);
+
+            /**Возвращаются пары с именами таблиц и версиями, которые новее в архиве gzip*/
+            ResponseEntity<byte[]> response = restTemplate.postForEntity( urlFull, request , byte[].class );
+
+            /**Вытаскиваем их из архива*/
+            MultiValueMap<String, Integer> mapNew = (MultiValueMap<String, Integer>)CompressObject.readCompressObject(response.getBody());
+
+            logger.info("Response. Begin updating these tables :\n\t " + mapNew);
             online = true;
 
             if(response.hasBody()){
-                response.getBody().keySet().stream().forEach(tableName-> {
+                mapNew.keySet().stream().forEach(tableName-> {
                     String tableNameResponse = String.valueOf(tableName).toLowerCase();
                     System.out.println("\nUpdate the table : " + tableNameResponse);
                     System.out.println("http://" + serverUrl + "/api/v1/"
                             + ipAddressBk.getIp() + "/update/" + tableName);
 
+                    /**Запрос на обновление таблицы. В ответе список строк таблицы.*/
                     DBModelContainer dbModelContainer = Request.get("http://" + serverUrl + "/api/v1/"
-                            + ipAddressBk.getIp() + "/update/" + tableName);
+                            + ipAddressBk.getIp() + "/update/" + tableName, tableName);
 
                     if(dbModelContainer!=null){
                         List<AbstractEntity> abstractEntityList = new ArrayList<>();
+                        /**Обновим таблицу*/
                         commonRepository = this.updateTable(dbModelContainer, abstractEntityList, tableNameResponse);
                         if(!abstractEntityList.isEmpty()){
-//                            try {
-//                                commonRepository.deleteAll();
-//                            }catch (DataIntegrityViolationException ex){
-//                                System.out.println("Delete exception : " + ex);
-//                            }
+                            try {
+                                commonRepository.deleteAll();
+                            }catch (DataIntegrityViolationException ex){
+                                System.out.println("Delete exception : " + ex);
+                            }
 
                             commonRepository.saveAll(abstractEntityList);
                             updateVersion(tableVersions,
                                     tableNameResponse,
-                                    Integer.valueOf(String.valueOf(response.getBody().getFirst(tableNameResponse))));
+                                    Integer.valueOf(String.valueOf(mapNew.getFirst(tableNameResponse))));
                             logger.info("Table \'" + tableName + "\'  has been updated.");
                         }
                         else{
@@ -229,7 +247,7 @@ public class UpdateController {
             /**После обновления устанавливаем время следующего планового обновления*/
             nextUpdateTime = nextUpdateTime.plusSeconds(period);
 
-        } catch (ResourceAccessException e) {
+        } catch (ResourceAccessException | IOException | ClassNotFoundException e) {
             logger.error("Connect exception \'" + urlFull +"\'");
             logger.info("Waiting to go offline");
             online = false;
@@ -247,7 +265,6 @@ public class UpdateController {
             nextUpdateTime = Instant.now();
         }
     }
-
 
 
     /**
@@ -282,6 +299,14 @@ public class UpdateController {
         logger.info(tableName + " = " + newVersion + " in (TableVersion). The version of the table in the database has been updated.");
     }
 
+    /**
+     * Обновление таблицы
+     * @param dbModelContainer список с массивами байт (строками таблицы) в kryo и имя таблицы
+     * @param abstractEntityList список строк таблицы для заполнения
+     * @param tableNameResponse имя текущей таблицы
+     * @return  репозиторий физической таблицы в h2
+     * @param <T>
+     */
     private <T> CommonRepository updateTable(DBModelContainer dbModelContainer,
                                              List<AbstractEntity> abstractEntityList,
                                              String tableNameResponse){
@@ -289,7 +314,7 @@ public class UpdateController {
             dbModelContainer.getData().stream().forEach(bytesArray -> {
                 T deserialize = (T) KryoSerializer.deserialize(bytesArray);
                 System.out.println(((AbstractEntity)deserialize).toStringShow());
-                abstractEntityList.add((AbstractEntity) deserialize);
+                abstractEntityList.add((AbstractEntity) deserialize);   //
             });
         } catch (Exception e) {
             e.printStackTrace();

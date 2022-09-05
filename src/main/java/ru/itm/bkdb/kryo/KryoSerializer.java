@@ -25,6 +25,14 @@ public class KryoSerializer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.print("------------------------------------Input = " + b.length);
+        byte[] bb = new byte[0];
+        try {
+            bb = CompressObject.writeCompressObject(b);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("; Output = " + bb.length + "-----------------------------");
         return b;
     }
 
