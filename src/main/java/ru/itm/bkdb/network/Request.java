@@ -57,7 +57,7 @@ public class Request {
         HttpEntity<String> request = new HttpEntity<String>("");
         ResponseEntity<MessageStatus> response
                 = restTemplate.getForEntity( url, MessageStatus.class );
-        logger.info("Response. The update came :\t " + response.getBody());
+        //logger.info("Response. The update came :\t " + response.getBody());
         return response.getBody();
     }
 

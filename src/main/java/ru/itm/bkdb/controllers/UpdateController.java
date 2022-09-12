@@ -34,6 +34,8 @@ import ru.itm.bkdb.udp.DBModelContainer;
 
 import java.io.IOException;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -65,7 +67,8 @@ public class UpdateController {
     private String serverUrl;
 
     /**Время следующего обновления*/
-    private Instant nextUpdateTime = Instant.now();
+    //private Instant nextUpdateTime = Instant.now();
+    private LocalDateTime nextUpdateTime = LocalDateTime.now();
 
     /**Через сколько секунд происходит плановое обновление*/
     @Value("${period.update}")
@@ -88,24 +91,25 @@ public class UpdateController {
     @EventListener(ApplicationReadyEvent.class)
     private void startIni(){
         initActuatorUrl = "http://localhost:10056/actuator/health";
-        System.out.println("init = " + init);
+        logger.info("\ninit = " + init);
         if(init){
             /**Раз в 20 сек пингуем инит. Если он вылетел, то выключаем сервис.*/
             Runnable task = () -> {
                 logger.info("InitPing started");
-                while(!SystemConfig.isNeedStop()){
+                int i=0;    //число попыток достучаться до инит
+                while(!SystemConfig.isNeedStop() && i<5){
                     try {
                         TimeUnit.SECONDS.sleep(20L);
                     } catch (InterruptedException ex) {
                         ex.printStackTrace();
                     }
-                    System.out.print("BCUpdate : isInitActive() ... ");
                     if(isInitActive()){
-                        System.out.println("ping init OK!");
+                        if(i>0) logger.info("Connection with the INIT is restored.");
+                        i=0;
                     }
                     else{
-                        System.out.println("ping init BAD!");
-                        break;
+                        if(i==0) logger.info("Ping init BAD!");
+                        i++;
                     }
                 }
                 logger.info("InitPing closed");
@@ -123,7 +127,7 @@ public class UpdateController {
     }
 
     private boolean isInitActive(){
-        System.out.println("ping init");
+        //System.out.println("ping init");
         try{
             MessageStatus messageStatus = Request.getMessageStatus(initActuatorUrl);
             return messageStatus.getStatus().toLowerCase().equals("up");
@@ -144,7 +148,8 @@ public class UpdateController {
         }
         /**Сравниваем запланированное время обновления с текущим временем, если пора,
          * то запускаем проверку обновления*/
-        if(nextUpdateTime.getEpochSecond()<=Instant.now().getEpochSecond()){
+        if(nextUpdateTime.isBefore(LocalDateTime.now())){
+        //if(nextUpdateTime.getEpochSecond()<=Instant.now().getEpochSecond()){
             updateTablesSearch();
         }
     }
@@ -165,7 +170,7 @@ public class UpdateController {
         /**Читаем все данные по версиям из базы в лист*/
         List<TableVersion> tableVersions = tablesService.findAll();
 
-        tmpPrintTables(tableVersions);  //в релизе убрать!! Лог таблиц из h2 с версиями
+        //tmpPrintTables(tableVersions);  //в релизе убрать!! Лог таблиц из h2 с версиями
 
         /**Синхронный клиент для выполнения HTTP-запросов, предоставляющий простой шаблон API
          *        метода поверх базовых клиентских библиотек HTTP, таких как JDK HttpURLConnection,
@@ -209,8 +214,8 @@ public class UpdateController {
             if(response.hasBody()){
                 mapNew.keySet().stream().forEach(tableName-> {
                     String tableNameResponse = String.valueOf(tableName).toLowerCase();
-                    System.out.println("\nUpdate the table : " + tableNameResponse);
-                    System.out.println("http://" + serverUrl + "/api/v1/"
+                    logger.info("\nUpdate the table : " + tableNameResponse);
+                    logger.info("http://" + serverUrl + "/api/v1/"
                             + ipAddressBk.getIp() + "/update/" + tableName);
 
                     /**Запрос на обновление таблицы. В ответе список строк таблицы.*/
@@ -225,7 +230,7 @@ public class UpdateController {
                             try {
                                 commonRepository.deleteAll();
                             }catch (DataIntegrityViolationException ex){
-                                System.out.println("Delete exception : " + ex);
+                                logger.error("Delete exception : " + ex);
                             }
 
                             commonRepository.saveAll(abstractEntityList);
@@ -245,7 +250,8 @@ public class UpdateController {
             }
 
             /**После обновления устанавливаем время следующего планового обновления*/
-            nextUpdateTime = nextUpdateTime.plusSeconds(period);
+            //nextUpdateTime = nextUpdateTime.plusSeconds(period);
+            getNextTime();
 
         } catch (ResourceAccessException | IOException | ClassNotFoundException e) {
             logger.error("Connect exception \'" + urlFull +"\'");
@@ -262,8 +268,23 @@ public class UpdateController {
             }
         }
         else{
-            nextUpdateTime = Instant.now();
+            nextUpdateTime = LocalDateTime.now();
         }
+    }
+
+    /**
+     * Установка времени следующего обновления. Кратно часу.
+     * @return время следующего обновления
+     */
+    private LocalDateTime getNextTime() {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        int h = localDateTime.getHour();
+        if(h==23){
+            nextUpdateTime.plusDays(1);
+        }
+        nextUpdateTime = nextUpdateTime.withHour((h+1)%24).withMinute(0).withSecond(0);
+
+        return nextUpdateTime;
     }
 
 
