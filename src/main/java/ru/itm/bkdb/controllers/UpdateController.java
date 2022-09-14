@@ -36,8 +36,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -48,6 +47,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RequestMapping("/api/v1/")
 public class UpdateController {
     private static Logger logger = LoggerFactory.getLogger(UpdateController.class);
+
+    private static String []transTimeArray = {"trans_fuel"};
+
 
     /** Сервис работы с БД H2*/
     private TablesService tablesService;
@@ -134,6 +136,81 @@ public class UpdateController {
         }catch (ResourceAccessException e){}
         return false;
     }
+
+    /**
+     * Запускается с задержкой 5 мин обновление trans_ по времени
+     */
+    @Scheduled(fixedDelay = 1)
+    private void updateTransTime(){
+        try {
+            TimeUnit.SECONDS.sleep(20L);
+        } catch (InterruptedException e) {
+            logger.info("TimeUnit.SECONDS.sleep(20L) прерван.");
+        }
+
+        Map<String, List<byte[]>> tablesMap = new HashMap<>();
+
+        Arrays.stream(transTimeArray).forEach(name->{
+            CommonRepository commonRepository = RepositoryFactory.getRepo(name);
+            if(commonRepository!=null){
+                List<byte[]> listEntity = new ArrayList<>();
+                System.out.println("Repo : " + name);
+                Iterable<AbstractEntity> abstractEntity = commonRepository.findAll();
+                abstractEntity.forEach(abstractEnt -> {
+                    System.out.println(abstractEnt.toStringShow());
+                    listEntity.add(KryoSerializer.serialize(abstractEnt));
+                });
+                tablesMap.put(name, listEntity);
+            }
+        });
+
+        try {
+            if(send5MinutesTrans(CompressObject.writeCompressObject(tablesMap))){
+                System.out.println("data is write in server");
+            }
+            else{
+                System.out.println("No write");
+            }
+        } catch (IOException e) {
+            logger.error("Compress error:\n" + e.getMessage());
+        }
+
+        try {
+            TimeUnit.SECONDS.sleep(280L);
+        } catch (InterruptedException e) {
+            logger.info("TimeUnit.SECONDS.sleep(280L) прерван.");
+        }
+    }
+
+    /**
+     * Отправить массив с trans таблицыми на сервер http://main:2600/api/v1/trans/update
+     * @param arrayToSend массив байт, который отправляется post запросом на сервер.
+     * @return
+     */
+    private boolean send5MinutesTrans(byte[] arrayToSend) {
+    /**Создаем post запрос и отправляем массив байт с парами (Имя таб, таблицы в виде List<byte[]) на сервер*/
+        String urlFull = "http://" + serverUrl + "/api/v1/trans/update";
+        System.out.println("size="+arrayToSend.length);
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);//APPLICATION_FORM_URLENCODED);
+
+            HttpEntity<byte[]> request = new HttpEntity<>(arrayToSend, headers);
+
+            /**Возвращаются 1 или 0 в зависимости от результатов записи в базу*/
+            ResponseEntity<Integer> response = restTemplate.postForEntity(urlFull, request, Integer.class);
+
+            logger.info("response.hasBody() && response.getBody() == 1 -> " + (response.hasBody() && response.getBody() == 1));
+
+            return response.hasBody() && response.getBody() == 1;
+
+        }catch (Exception e){
+            logger.error("Connect exception \'" + urlFull +"\'");
+        }
+        return false;
+    }
+
 
     /**
      * Запускается с задержкой 10с проверка необходимости обновления баз
@@ -280,9 +357,11 @@ public class UpdateController {
         LocalDateTime localDateTime = LocalDateTime.now();
         int h = localDateTime.getHour();
         if(h==23){
-            nextUpdateTime.plusDays(1);
+            nextUpdateTime = nextUpdateTime.plusDays(1L).withHour(0).withMinute(0).withSecond(0);
         }
-        nextUpdateTime = nextUpdateTime.withHour((h+1)%24).withMinute(0).withSecond(0);
+        else{
+            nextUpdateTime = nextUpdateTime.withHour((h+1)%24).withMinute(0).withSecond(0);
+        }
 
         return nextUpdateTime;
     }
@@ -334,12 +413,12 @@ public class UpdateController {
         try {
             dbModelContainer.getData().stream().forEach(bytesArray -> {
                 T deserialize = (T) KryoSerializer.deserialize(bytesArray);
-                System.out.println(((AbstractEntity)deserialize).toStringShow());
+                logger.info(((AbstractEntity)deserialize).toStringShow());
                 abstractEntityList.add((AbstractEntity) deserialize);   //
             });
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Problem with the table.");
+            logger.info("Problem with the table.");
         }
         return RepositoryFactory.getRepo(tableNameResponse);
     }
