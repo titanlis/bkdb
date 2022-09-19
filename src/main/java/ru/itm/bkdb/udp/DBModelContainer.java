@@ -1,8 +1,5 @@
 package ru.itm.bkdb.udp;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 import java.util.List;
 
 /**

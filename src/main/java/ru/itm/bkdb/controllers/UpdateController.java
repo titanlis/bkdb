@@ -140,7 +140,7 @@ public class UpdateController {
     /**
      * Запускается с задержкой 5 мин обновление trans_ по времени
      */
-    @Scheduled(fixedDelay = 1)
+    @Scheduled(fixedDelay = 280000)
     private void updateTransTime(){
         try {
             TimeUnit.SECONDS.sleep(20L);
@@ -148,38 +148,56 @@ public class UpdateController {
             logger.info("TimeUnit.SECONDS.sleep(20L) прерван.");
         }
 
-        Map<String, List<byte[]>> tablesMap = new HashMap<>();
+        Map<String, List<byte[]>> tablesMap = new HashMap<>();              //для таблиц со сжатием
+        Map<String, Iterable<AbstractEntity>> tablesList = new HashMap<>(); //для таблиц без сжатия
 
+        /**Все имена таблиц*/
         Arrays.stream(transTimeArray).forEach(name->{
+            /**Для каждого имени находим репозиторий*/
             CommonRepository commonRepository = RepositoryFactory.getRepo(name);
             if(commonRepository!=null){
                 List<byte[]> listEntity = new ArrayList<>();
                 System.out.println("Repo : " + name);
-                Iterable<AbstractEntity> abstractEntity = commonRepository.findAll();
-                abstractEntity.forEach(abstractEnt -> {
-                    System.out.println(abstractEnt.toStringShow());
-                    listEntity.add(KryoSerializer.serialize(abstractEnt));
-                });
-                tablesMap.put(name, listEntity);
+                Iterable<AbstractEntity> abstractEntities = commonRepository.findAll();
+
+                /**Если таблица не пуста*/
+                if(((List)abstractEntities).size()>0){
+                    tablesList.put(name, abstractEntities);
+
+                    abstractEntities.forEach(abstractEnt -> {
+                        System.out.println(abstractEnt.toStringShow());
+                        listEntity.add(KryoSerializer.serialize(abstractEnt));
+                    });
+                    tablesMap.put(name, listEntity);
+                }
             }
         });
 
         try {
-            if(send5MinutesTrans(CompressObject.writeCompressObject(tablesMap))){
-                System.out.println("data is write in server");
+            if(!tablesMap.isEmpty()){
+                if(send5MinutesTrans(CompressObject.writeCompressObject(tablesMap))){
+                    logger.info("data is write in server");
+                    /**Разобрали таблицы*/
+                    tablesList.forEach((names, iterableAbstractEntity) ->{
+                        CommonRepository commonRepository = RepositoryFactory.getRepo(names);
+
+                        iterableAbstractEntity.forEach(b-> {
+                            commonRepository.delete(b);
+                        });
+                        logger.info("Table \'"+names+"\' is cleaned.");
+                    });
+                }
+                else{
+                    logger.info("No write");
+                }
             }
             else{
-                System.out.println("No write");
+                logger.info("No tables trans_ for update");
             }
         } catch (IOException e) {
             logger.error("Compress error:\n" + e.getMessage());
         }
 
-        try {
-            TimeUnit.SECONDS.sleep(280L);
-        } catch (InterruptedException e) {
-            logger.info("TimeUnit.SECONDS.sleep(280L) прерван.");
-        }
     }
 
     /**
@@ -216,13 +234,13 @@ public class UpdateController {
      * Запускается с задержкой 10с проверка необходимости обновления баз
      * на случай оффлайна. При выходе из оффлайна максимум через 10с базы обновятся.
      */
-    @Scheduled(fixedDelay = 1)
+    @Scheduled(fixedDelay = 10000)
     private void updateProcessStart(){
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            logger.info("Thread.sleep(10000) прерван.");
-        }
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            logger.info("Thread.sleep(10000) прерван.");
+//        }
         /**Сравниваем запланированное время обновления с текущим временем, если пора,
          * то запускаем проверку обновления*/
         if(nextUpdateTime.isBefore(LocalDateTime.now())){

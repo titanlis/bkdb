@@ -1,5 +1,7 @@
 package ru.itm.bkdb.entity;
 
+import ru.itm.bkdb.entity.tables.trans.TransFuel;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
@@ -23,5 +25,4 @@ public abstract class AbstractEntity{
     }
 
     public abstract String toStringShow();
-
 }
