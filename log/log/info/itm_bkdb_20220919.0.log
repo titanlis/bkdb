@@ -1,0 +1,177 @@
+2022-09-19 15:01:14.127 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on ubuntu with PID 27026 (/mnt/hgfs/YD/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /mnt/hgfs/YD/ITMiningYD/12/bk/bkdb)
+2022-09-19 15:01:14.149 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-09-19 15:01:20.539 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 15:01:22.609 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 2013 ms. Found 58 JPA repository interfaces.
+2022-09-19 15:01:25.820 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-09-19 15:01:25.855 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-09-19 15:01:25.858 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-19 15:01:25.860 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 15:01:26.299 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-19 15:01:26.301 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 11965 ms
+2022-09-19 15:01:28.841 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 15:01:29.109 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 15:01:33.412 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 15:01:34.107 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-09-19 15:01:34.340 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-09-19 15:01:34.474 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-09-19 15:01:39.046 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 15:01:39.092 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 15:01:48.158 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-09-19 15:01:48.311 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-09-19 15:01:48.619 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-09-19 15:01:48.623 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-09-19 15:01:48.624 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-09-19 15:01:48.626 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 15:01:48.653 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-19 15:01:48.655 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 297 ms
+2022-09-19 15:01:48.696 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-09-19 15:01:48.800 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-09-19 15:01:48.813 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-09-19 15:01:48.875 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 37.98 seconds (JVM running for 40.617)
+2022-09-19 15:01:48.893 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:96  - 
+init = false
+2022-09-19 15:01:49.026 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 15:01:49.027 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-19 15:01:49.032 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-09-19 15:02:16.189 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 15:02:17.105 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 15:02:17.426 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 15:02:17.857 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:306 - Response. Begin updating these tables :
+	 {equipment=[28]}
+2022-09-19 15:02:17.859 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:312 - 
+Update the table : equipment
+2022-09-19 15:02:17.862 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:313 - http://localhost:2600/api/v1/192.168.100.21/update/equipment
+2022-09-19 15:02:17.985 INFO  [scheduling-1] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@6a578239
+2022-09-19 15:02:18.023 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=2, equipmentName=SDP001, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.133, equipmentMAC=1C:1B:0D:3A:A9:A7, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.024 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=15, equipmentName=CAK033, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530AT00002, equipmentIP=192.168.254.143, equipmentMAC=00:14:0B:87:07:7A, fuelLevel=1300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.026 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=17, equipmentName=CAK006, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=PBZ23EG, equipmentIP=192.168.254.172, equipmentMAC=A4:4E:31:28:86:B0, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.027 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=4, equipmentName=SDP002, equipmentTypeId=4, description=1, model=null, fleet=null, equipmentSerialNumber=012345, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.028 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=1, equipmentName=CAK001, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=08-5452-77-3, equipmentIP=192.168.254.92, equipmentMAC=null, fuelLevel=323.25, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.029 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=25, equipmentName=ESK183, equipmentTypeId=2, description=BC183, model=null, fleet=null, equipmentSerialNumber=SN-BC183, equipmentIP=192.168.254.183, equipmentMAC=00:14:0B:89:B4:1A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.031 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=6, equipmentName=CAK002, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.153, equipmentMAC=00:14:0B:87:7B:20, fuelLevel=323.75, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.031 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=24, equipmentName=KRIL63, equipmentTypeId=2, description=ubComp, model=null, fleet=null, equipmentSerialNumber=KRIL63-VPN, equipmentIP=192.168.1.16, equipmentMAC=94:DB:C9:4A:14:58, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.033 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=8, equipmentName=testS3, equipmentTypeId=5, description=null, model=null, fleet=null, equipmentSerialNumber=2, equipmentIP=192.168.254.140, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.034 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=9, equipmentName=CAK003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=3, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.035 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=10, equipmentName=ESK01, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=4, equipmentIP=192.168.254.146, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.036 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=11, equipmentName=ESK02, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=5, equipmentIP=192.168.254.147, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.038 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=12, equipmentName=testS7, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=6, equipmentIP=192.168.254.148, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.039 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=13, equipmentName=FT1, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=7, equipmentIP=192.168.254.149, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.040 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=14, equipmentName=CAK004, equipmentTypeId=1, description=newTest, model=null, fleet=null, equipmentSerialNumber=8, equipmentIP=192.168.254.150, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.042 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=16, equipmentName=CAK005, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=9, equipmentIP=192.168.254.151, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=0, costCenter=null, active=false]
+2022-09-19 15:02:18.043 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=22, equipmentName=CAK007, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=10, equipmentIP=192.168.254.152, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=false]
+2022-09-19 15:02:18.044 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=7, equipmentName=ESK07, equipmentTypeId=2, description=123, model=null, fleet=null, equipmentSerialNumber=1, equipmentIP=192.168.254.144, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.046 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=27, equipmentName=fab4, equipmentTypeId=2, description=fab4, model=null, fleet=null, equipmentSerialNumber=VPN72-FABR4, equipmentIP=192.168.100.21, equipmentMAC=00:0C:29:01:B0:A1, fuelLevel=800.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.046 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=5, equipmentName=ESK05, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00184, equipmentIP=192.168.254.142, equipmentMAC=00:14:0B:87:7B:21, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.047 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=19, equipmentName=SDP019, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00192, equipmentIP=192.168.254.156, equipmentMAC=00:14:0B:87:7B:01, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.048 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=3, equipmentName=MT003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.134, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.051 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=23, equipmentName=SDP023, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530HW00049, equipmentIP=192.168.254.142, equipmentMAC=null, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.052 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:434 - equipment.equipment [id=26, equipmentName=ESK182, equipmentTypeId=2, description=BC182, model=null, fleet=null, equipmentSerialNumber=SY9530AT00002, equipmentIP=192.168.254.182, equipmentMAC=00:14:0B:87:07:7A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-09-19 15:02:18.427 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:417 - equipment = 28 in (TableVersion). The version of the table in the database has been updated.
+2022-09-19 15:02:18.429 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:335 - Table 'equipment'  has been updated.
+2022-09-19 15:02:18.431 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:358 - All tables have been updated
+2022-09-19 15:07:17.442 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:12:17.666 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 15:12:17.670 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 15:12:17.679 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 15:17:17.967 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 15:17:17.980 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 15:17:17.987 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 15:22:18.230 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 15:22:18.233 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 15:22:18.242 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 15:27:18.518 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 15:27:18.521 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 15:27:18.531 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 15:32:18.552 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:37:18.565 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:42:18.587 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:47:18.613 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:52:18.626 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 15:57:18.638 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:195 - No tables trans_ for update
+2022-09-19 16:00:08.945 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:306 - Response. Begin updating these tables :
+	 {}
+2022-09-19 16:00:08.949 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:358 - All tables have been updated
+2022-09-19 16:02:18.837 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:02:18.841 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:02:18.851 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:07:19.143 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:07:19.146 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:07:19.158 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:12:19.410 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:12:19.413 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:12:19.426 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:17:19.676 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:17:19.679 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:17:19.686 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:22:19.936 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:22:19.941 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:22:19.950 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:27:20.195 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:27:20.200 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:27:20.214 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:32:21.007 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:32:21.012 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:32:21.037 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:37:21.435 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:37:21.438 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:37:21.447 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:42:21.921 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:42:21.936 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:42:21.967 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:47:22.276 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:47:22.282 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:47:22.324 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:52:22.689 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:52:22.709 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:52:22.761 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 16:57:23.088 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 16:57:23.104 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 16:57:23.111 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:00:03.617 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:306 - Response. Begin updating these tables :
+	 {}
+2022-09-19 17:00:03.621 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:358 - All tables have been updated
+2022-09-19 17:02:23.581 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:02:23.585 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:02:23.593 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:07:23.895 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:07:23.923 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:07:23.948 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:12:24.440 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:12:24.444 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:12:24.470 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:17:24.943 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:17:24.947 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:17:24.958 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:22:25.344 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:22:25.348 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:22:25.360 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:27:25.631 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:27:25.634 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:27:25.657 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:32:25.985 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:32:26.007 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:32:26.038 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:37:26.450 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:37:26.453 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:37:26.464 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:42:26.776 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:42:26.780 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:42:26.812 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:47:27.144 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:47:27.149 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:47:27.182 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:52:27.650 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:52:27.653 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:52:27.661 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 17:57:27.978 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 17:57:27.983 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 17:57:28.014 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 18:00:08.798 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:306 - Response. Begin updating these tables :
+	 {}
+2022-09-19 18:00:08.801 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:358 - All tables have been updated
+2022-09-19 18:02:28.978 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:222 - response.hasBody() && response.getBody() == 1 -> true
+2022-09-19 18:02:29.011 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:179 - data is write in server
+2022-09-19 18:02:29.023 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:187 - Table 'trans_fuel' is cleaned.
+2022-09-19 18:03:56.732 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 18:03:56.743 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-09-19 18:03:56.971 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

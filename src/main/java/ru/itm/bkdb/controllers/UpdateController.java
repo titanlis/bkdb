@@ -48,7 +48,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UpdateController {
     private static Logger logger = LoggerFactory.getLogger(UpdateController.class);
 
-    private static String []transTimeArray = {"trans_fuel"};
+    private static String []transTimeArray = {"trans_fuel","trans_coord"};
 
 
     /** Сервис работы с БД H2*/

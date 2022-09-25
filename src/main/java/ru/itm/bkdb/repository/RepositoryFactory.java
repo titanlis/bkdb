@@ -23,6 +23,7 @@ import ru.itm.bkdb.repository.status.*;
 import ru.itm.bkdb.repository.tire.TireAssignRepository;
 import ru.itm.bkdb.repository.tire.TireRepository;
 import ru.itm.bkdb.repository.tire.TireStorageRepository;
+import ru.itm.bkdb.repository.trans.TransCoordRepository;
 import ru.itm.bkdb.repository.trans.TransFuelRepository;
 
 @Component
@@ -87,6 +88,12 @@ public class RepositoryFactory {
     private static TireStorageRepository tireStorageRepository;
 
     private static TransFuelRepository transFuelRepository;
+    private static TransCoordRepository transCoordRepository;
+
+    @Autowired
+    public void setTransCoordRepository(TransCoordRepository transCoordRepository) {
+        RepositoryFactory.transCoordRepository = transCoordRepository;
+    }
 
     @Autowired
     public void setTransFuelRepository(TransFuelRepository transFuelRepository) {
@@ -430,6 +437,7 @@ public class RepositoryFactory {
             case "tire_storage" -> tireStorageRepository;
 
             case "trans_fuel" -> transFuelRepository;
+            case "trans_coord" -> transCoordRepository;
 
             default ->  null;
         };

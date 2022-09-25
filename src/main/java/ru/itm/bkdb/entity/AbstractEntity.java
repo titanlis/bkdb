@@ -3,6 +3,7 @@ package ru.itm.bkdb.entity;
 import ru.itm.bkdb.entity.tables.trans.TransFuel;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
@@ -12,9 +13,11 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass   // — Hibernate тоже должен узнать, что это абстракция.
 public abstract class AbstractEntity{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     protected Long id;    //id есть у каждой сущности
 
-    @Id
+
     //@GeneratedValue
     public Long getId() {
         return id;

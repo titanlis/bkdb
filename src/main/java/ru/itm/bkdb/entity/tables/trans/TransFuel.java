@@ -114,14 +114,39 @@ public class TransFuel extends AbstractEntity implements Trans{
 		this.fuelLevel = fuelLevel;
 	}
 
+
+	public TransFuel(TransFuel transFuel) {
+		this.equipId = transFuel.equipId;
+		this.shift_date = transFuel.shift_date;
+		this.shift_id = transFuel.shift_id;
+		this.timeRead = transFuel.timeRead;
+		this.fuelLevel = transFuel.fuelLevel;
+		this.fuel_raw = transFuel.fuel_raw;
+		this.trans_cycles_id = transFuel.trans_cycles_id;
+	}
+
+
+	@Override
+	public Long getEquipIdTrans() {
+		return equipId;
+	}
+
+	//@Override
+	@Override
+	public Calendar getTime() {
+		return timeRead;
+	}
+
+
+
 	/**
 	 * нет ли такой записи в базе?
 	 * @param trans запись с которой сравниваем
 	 * @return false если для этого оборудования не найдена временная метка
 	 */
-	@Override
-	public boolean isForWrite(AbstractEntity trans) {
-		return !timeRead.equals(((TransFuel)trans).getTimeRead()) && equipId.equals(((TransFuel)trans).equipId);
-	}
+//	@Override
+//	public boolean isForWrite(AbstractEntity trans) {
+//		return !timeRead.equals(((TransFuel)trans).getTimeRead()) && equipId.equals(((TransFuel)trans).equipId);
+//	}
 
 }
