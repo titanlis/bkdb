@@ -48,7 +48,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UpdateController {
     private static Logger logger = LoggerFactory.getLogger(UpdateController.class);
 
-    private static String []transTimeArray = {"trans_fuel","trans_coord"};
+    private static String []transTimeArray = {"trans_fuel","trans_coord", "trans_sensor"};
 
 
     /** Сервис работы с БД H2*/
@@ -169,6 +169,10 @@ public class UpdateController {
                         listEntity.add(KryoSerializer.serialize(abstractEnt));
                     });
                     tablesMap.put(name, listEntity);
+                    System.out.println("End " + name);
+                }
+                else{
+                    System.out.println("Empty " + name);
                 }
             }
         });
@@ -432,6 +436,7 @@ public class UpdateController {
             dbModelContainer.getData().stream().forEach(bytesArray -> {
                 T deserialize = (T) KryoSerializer.deserialize(bytesArray);
                 logger.info(((AbstractEntity)deserialize).toStringShow());
+
                 abstractEntityList.add((AbstractEntity) deserialize);   //
             });
         } catch (Exception e) {

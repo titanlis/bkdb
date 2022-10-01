@@ -2,10 +2,7 @@ package ru.itm.bkdb.entity;
 
 import ru.itm.bkdb.entity.tables.trans.TransFuel;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * @class AbstractEntity абстрактный класс для всех сущностей
@@ -14,9 +11,12 @@ import javax.persistence.MappedSuperclass;
 public abstract class AbstractEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)//.SEQUENCE)
+//    @SequenceGenerator(name = "seq",
+//            sequenceName = "sequence",
+//            initialValue = 1, allocationSize = 20)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     protected Long id;    //id есть у каждой сущности
-
 
     //@GeneratedValue
     public Long getId() {
@@ -27,5 +27,4 @@ public abstract class AbstractEntity{
         this.id = id;
     }
 
-    public abstract String toStringShow();
-}
+    public String toStringShow(){return toString();};}

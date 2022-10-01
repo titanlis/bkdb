@@ -5,6 +5,7 @@ import ru.itm.bkdb.entity.AbstractEntity;
 import javax.persistence.*;
 import java.util.Date;
 
+
 @Entity
 @Table(name = "shifts", schema = "shift")
 public final class Shift extends AbstractEntity {
@@ -21,6 +22,9 @@ public final class Shift extends AbstractEntity {
 	@Column(name = "threshold")
 	private Integer threshold;
 
+	@Column(name = "ext_id")
+	private Long ext_id;
+
 	public Shift(){}
 
 	@Override
@@ -31,6 +35,7 @@ public final class Shift extends AbstractEntity {
 				", start_time=" + start_time +
 				", end_time=" + end_time +
 				", thresold=" + threshold +
+				", ext_id=" + ext_id +
 				'}';
 	}
 
@@ -69,5 +74,13 @@ public final class Shift extends AbstractEntity {
 
 	public void setThreshold(Integer threshold) {
 		this.threshold = threshold;
+	}
+
+	public Long getExt_id() {
+		return ext_id;
+	}
+
+	public void setExt_id(Long ext_id) {
+		this.ext_id = ext_id;
 	}
 }
