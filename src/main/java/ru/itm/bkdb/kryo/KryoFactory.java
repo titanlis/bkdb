@@ -22,9 +22,7 @@ import ru.itm.bkdb.entity.tables.status.*;
 import ru.itm.bkdb.entity.tables.tire.Tire;
 import ru.itm.bkdb.entity.tables.tire.TireAssign;
 import ru.itm.bkdb.entity.tables.tire.TireStorage;
-import ru.itm.bkdb.entity.tables.trans.TransCoord;
-import ru.itm.bkdb.entity.tables.trans.TransFuel;
-import ru.itm.bkdb.entity.tables.trans.TransSensor;
+import ru.itm.bkdb.entity.tables.trans.*;
 
 import java.math.BigDecimal;
 import java.sql.Time;
@@ -122,15 +120,18 @@ public abstract class KryoFactory {
         kryo.register(TireAssign.class);
         kryo.register(TireStorage.class);
 
-        kryo.register(TransFuel.class);
         kryo.register(Calendar.class);
         kryo.register(GregorianCalendar.class);
         kryo.register(BigDecimal.class);
-
-        kryo.register(TransCoord.class);
-        kryo.register(TransSensor.class);
         kryo.register(LocalDate.class);
         kryo.register(LocalTime.class);
+
+        kryo.register(TransFuel.class);
+        kryo.register(TransCoord.class);
+        kryo.register(TransSensor.class);
+        kryo.register(TransKeysCycle.class);
+        kryo.register(TransKeysDrilling.class);
+        kryo.register(TransNetwork.class);
 
         return kryo;
     }

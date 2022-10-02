@@ -23,9 +23,7 @@ import ru.itm.bkdb.repository.status.*;
 import ru.itm.bkdb.repository.tire.TireAssignRepository;
 import ru.itm.bkdb.repository.tire.TireRepository;
 import ru.itm.bkdb.repository.tire.TireStorageRepository;
-import ru.itm.bkdb.repository.trans.TransCoordRepository;
-import ru.itm.bkdb.repository.trans.TransFuelRepository;
-import ru.itm.bkdb.repository.trans.TransSensorRepository;
+import ru.itm.bkdb.repository.trans.*;
 
 @Component
 public class RepositoryFactory {
@@ -91,7 +89,25 @@ public class RepositoryFactory {
     private static TransFuelRepository transFuelRepository;
     private static TransCoordRepository transCoordRepository;
     private static TransSensorRepository transSensorRepository;
+    private static TransKeysCycleRepository transKeysCycleRepository;
+    private static TransKeysDrillingRepository transKeysDrillingRepository;
+    private static TransNetworkRepository transNetworkRepository;
 
+    @Autowired
+    public void setTransNetworkRepository(TransNetworkRepository transNetworkRepository) {
+        RepositoryFactory.transNetworkRepository = transNetworkRepository;
+    }
+
+    @Autowired
+    public void setTransKeysDrillingRepository(TransKeysDrillingRepository transKeysDrillingRepository) {
+        RepositoryFactory.transKeysDrillingRepository = transKeysDrillingRepository;
+    }
+
+
+    @Autowired
+    public void setTransKeysCycleRepository(TransKeysCycleRepository transKeysCycleRepository) {
+        RepositoryFactory.transKeysCycleRepository = transKeysCycleRepository;
+    }
     @Autowired
     public void setTransSensorRepository(TransSensorRepository transSensorRepository) {
         RepositoryFactory.transSensorRepository = transSensorRepository;
@@ -447,6 +463,9 @@ public class RepositoryFactory {
             case "trans_fuel" -> transFuelRepository;
             case "trans_coord" -> transCoordRepository;
             case "trans_sensor" -> transSensorRepository;
+            case "trans_keys_cycle" -> transKeysCycleRepository;
+            case "trans_keys_drilling" -> transKeysDrillingRepository;
+            case "trans_network" -> transNetworkRepository;
 
             default ->  null;
         };
