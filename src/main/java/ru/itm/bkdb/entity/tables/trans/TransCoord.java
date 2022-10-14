@@ -56,7 +56,7 @@ public class TransCoord extends AbstractEntity implements Trans{
     @Column(name = "gnss_rtk", precision = 2)
     private Integer gnssRtk;                             //тип решения в случае высокуоточки
 
-    @Column(name = "cycle_id")
+    @Column(name = "trans_cycles_id")
     private Long cycleId;                                   //FK ссылка на локацию, в которой находится техника
 
     @Column(name = "loc_id")
@@ -87,7 +87,7 @@ public class TransCoord extends AbstractEntity implements Trans{
 
     @Override
     public String toString() {
-        return "trans.trans_fuel" + '{' +
+        return "trans.trans_coord" + '{' +
                 "\"id\":" + id +
                 ", \"equip_id\":" + equipId +
                 ", \"gnss_time\":\"" + calendarToString(gnssTime) + "\"" +

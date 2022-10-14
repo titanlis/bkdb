@@ -15,10 +15,9 @@ import java.util.Optional;
 public class TablesService {
 
     private static Logger logger = LoggerFactory.getLogger(TablesService.class);
-
-    @Autowired
     private final TableRepository tableRepository;
 
+    @Autowired
     public TablesService(TableRepository tableRepository) {
         this.tableRepository = tableRepository;
     }

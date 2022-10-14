@@ -27,6 +27,7 @@ import ru.itm.bkdb.entity.tables.trans.*;
 import java.math.BigDecimal;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Calendar;
@@ -125,6 +126,7 @@ public abstract class KryoFactory {
         kryo.register(BigDecimal.class);
         kryo.register(LocalDate.class);
         kryo.register(LocalTime.class);
+        kryo.register(Instant.class);
 
         kryo.register(TransFuel.class);
         kryo.register(TransCoord.class);
@@ -132,6 +134,8 @@ public abstract class KryoFactory {
         kryo.register(TransKeysCycle.class);
         kryo.register(TransKeysDrilling.class);
         kryo.register(TransNetwork.class);
+        kryo.register(TransCycle.class);
+        kryo.register(TransRefuel.class);
 
         return kryo;
     }

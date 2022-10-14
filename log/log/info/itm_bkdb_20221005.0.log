@@ -1,0 +1,608 @@
+2022-10-05 00:00:01.182 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 00:00:01.183 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 00:00:40.885 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:05:40.895 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:10:40.910 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:15:40.923 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:20:40.937 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:25:40.949 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:30:40.961 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:35:40.972 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 00:40:41.374 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 00:40:41.375 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 00:40:41.382 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_sensor' is cleaned.
+2022-10-05 00:40:41.385 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 00:40:53.382 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 00:40:53.383 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 00:40:53.390 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 15:20:15.751 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on ubuntu with PID 15832 (/mnt/hgfs/YD/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /mnt/hgfs/YD/ITMiningYD/12/bk/bkdb)
+2022-10-05 15:20:15.757 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 15:20:22.538 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 15:20:24.086 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 1510 ms. Found 63 JPA repository interfaces.
+2022-10-05 15:20:27.165 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 15:20:27.202 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 15:20:27.205 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 15:20:27.206 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 15:20:27.478 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 15:20:27.480 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 11505 ms
+2022-10-05 15:20:29.590 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 15:20:29.866 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 15:20:34.141 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 15:20:34.870 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 15:20:35.201 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 15:20:35.463 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 15:20:42.357 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 15:20:42.414 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 15:20:52.396 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 15:20:52.460 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 15:20:52.713 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 15:20:52.715 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 15:20:52.717 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 15:20:52.718 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 15:20:52.754 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 15:20:52.756 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 277 ms
+2022-10-05 15:20:52.778 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 15:20:52.878 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 15:20:52.943 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 15:20:53.000 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 39.991 seconds (JVM running for 44.184)
+2022-10-05 15:20:53.015 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 15:21:14.424 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 15:21:14.430 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 15:21:14.642 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_fuel' is cleaned.
+2022-10-05 15:21:14.779 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_network' is cleaned.
+2022-10-05 15:21:14.812 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 15:21:14.971 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 15:21:14.973 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 15:26:14.852 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 15:27:10.986 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 15:27:11.034 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 15:27:11.095 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 15:32:30.262 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on ubuntu with PID 19937 (/mnt/hgfs/YD/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /mnt/hgfs/YD/ITMiningYD/12/bk/bkdb)
+2022-10-05 15:32:30.270 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 15:32:34.673 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 15:32:36.399 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 1684 ms. Found 63 JPA repository interfaces.
+2022-10-05 15:32:38.829 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 15:32:38.869 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 15:32:38.872 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 15:32:38.873 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 15:32:39.157 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 15:32:39.159 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 8691 ms
+2022-10-05 15:32:41.310 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 15:32:42.043 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 15:32:43.541 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 15:32:44.595 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 15:32:45.106 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 15:32:45.488 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 15:32:50.666 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 15:32:50.752 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 15:33:00.727 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 15:33:00.771 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 15:33:01.007 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 15:33:01.009 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 15:33:01.012 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 15:33:01.013 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 15:33:01.036 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 15:33:01.037 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 250 ms
+2022-10-05 15:33:01.059 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 15:33:01.158 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 15:33:01.169 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 15:33:01.215 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 33.003 seconds (JVM running for 34.936)
+2022-10-05 15:33:01.234 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 15:33:01.368 INFO  [RMI TCP Connection(13)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 15:33:01.370 INFO  [RMI TCP Connection(13)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 15:33:01.373 INFO  [RMI TCP Connection(13)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-05 15:33:22.392 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 15:33:22.397 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 15:33:22.638 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 15:33:22.766 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 15:33:22.768 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 15:33:29.241 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 15:33:29.249 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 15:33:29.266 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 19:12:12.752 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 8622 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 19:12:12.754 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 19:12:13.586 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 19:12:13.716 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 120 ms. Found 63 JPA repository interfaces.
+2022-10-05 19:12:14.277 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 19:12:14.284 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 19:12:14.285 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 19:12:14.285 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 19:12:14.377 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 19:12:14.377 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1586 ms
+2022-10-05 19:12:14.671 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 19:12:14.704 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 19:12:14.863 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 19:12:14.951 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 19:12:15.020 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 19:12:15.045 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 19:12:15.978 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 19:12:15.984 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 19:12:17.976 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 19:12:17.989 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 19:12:18.050 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 19:12:18.050 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 19:12:18.051 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 19:12:18.051 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 19:12:18.060 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 19:12:18.061 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 68 ms
+2022-10-05 19:12:18.070 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 19:12:18.099 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 19:12:18.102 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 19:12:18.119 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.805 seconds (JVM running for 6.267)
+2022-10-05 19:12:18.125 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 19:12:18.213 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 19:12:18.213 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 19:12:18.215 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-05 19:12:38.647 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 19:12:38.647 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 19:12:38.678 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 19:12:38.881 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 19:12:38.882 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 19:17:38.693 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:22:38.710 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:27:38.723 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:32:38.737 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:37:38.750 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:42:38.769 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:47:38.782 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:52:38.793 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 19:57:38.800 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:00:09.170 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:00:09.170 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:00:50.392 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:00:50.395 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 20:00:50.401 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 20:01:23.588 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 19265 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 20:01:23.590 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 20:01:24.362 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 20:01:24.487 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 114 ms. Found 63 JPA repository interfaces.
+2022-10-05 20:01:24.996 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 20:01:25.003 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:01:25.004 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:01:25.004 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:01:25.074 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:01:25.075 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1444 ms
+2022-10-05 20:01:25.384 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 20:01:25.414 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 20:01:25.519 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 20:01:25.606 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 20:01:25.668 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 20:01:25.690 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 20:01:26.522 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 20:01:26.528 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:01:28.420 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:01:28.430 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 20:01:28.483 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 20:01:28.484 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:01:28.484 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:01:28.484 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:01:28.494 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:01:28.494 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 61 ms
+2022-10-05 20:01:28.503 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 20:01:28.538 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:01:28.540 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 20:01:28.563 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.332 seconds (JVM running for 5.763)
+2022-10-05 20:01:28.569 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 20:01:28.673 INFO  [RMI TCP Connection(1)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 20:01:28.674 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 20:01:28.676 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-05 20:01:49.065 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 20:01:49.066 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 20:01:49.102 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 20:01:49.275 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:01:49.276 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:02:09.480 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:02:09.481 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 20:02:09.489 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 20:03:07.270 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 19987 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 20:03:07.273 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 20:03:08.053 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 20:03:08.174 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 113 ms. Found 63 JPA repository interfaces.
+2022-10-05 20:03:08.741 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 20:03:08.750 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:03:08.751 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:03:08.752 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:03:08.830 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:03:08.830 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1505 ms
+2022-10-05 20:03:09.137 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 20:03:09.168 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 20:03:09.275 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 20:03:09.359 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 20:03:09.425 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 20:03:09.448 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 20:03:10.249 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 20:03:10.256 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:03:12.256 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:03:12.268 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 20:03:12.319 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 20:03:12.320 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:03:12.320 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:03:12.321 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:03:12.329 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:03:12.329 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 56 ms
+2022-10-05 20:03:12.338 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 20:03:12.363 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:03:12.365 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 20:03:12.382 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.493 seconds (JVM running for 5.892)
+2022-10-05 20:03:12.387 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 20:03:12.820 INFO  [RMI TCP Connection(1)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 20:03:12.820 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 20:03:12.822 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-05 20:03:40.334 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:229 - No write
+2022-10-05 20:03:42.358 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:03:42.359 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:03:50.238 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:03:50.240 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 20:03:50.246 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 20:07:53.953 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 22028 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 20:07:53.956 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 20:07:54.650 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 20:07:54.769 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 111 ms. Found 63 JPA repository interfaces.
+2022-10-05 20:07:55.299 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 20:07:55.307 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:07:55.308 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:07:55.308 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:07:55.371 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:07:55.371 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1379 ms
+2022-10-05 20:07:55.657 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 20:07:55.689 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 20:07:55.805 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 20:07:55.889 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 20:07:55.963 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 20:07:55.991 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 20:07:56.815 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 20:07:56.821 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:07:58.669 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:07:58.680 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 20:07:58.733 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 20:07:58.734 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:07:58.734 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:07:58.734 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:07:58.744 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:07:58.744 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 61 ms
+2022-10-05 20:07:58.759 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 20:07:58.795 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:07:58.799 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 20:07:58.816 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.223 seconds (JVM running for 5.7)
+2022-10-05 20:07:58.822 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 20:07:58.961 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 20:07:58.962 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 20:07:58.965 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 3 ms
+2022-10-05 20:08:20.099 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 20:08:20.099 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 20:08:20.131 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 20:08:20.481 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:08:20.482 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:13:20.143 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:15:44.388 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:15:44.390 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 20:15:44.395 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 20:15:46.813 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 24723 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 20:15:46.814 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 20:15:47.539 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 20:15:47.655 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 109 ms. Found 63 JPA repository interfaces.
+2022-10-05 20:15:48.208 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 20:15:48.215 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:15:48.215 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:15:48.216 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:15:48.285 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:15:48.285 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1425 ms
+2022-10-05 20:15:48.566 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 20:15:48.597 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 20:15:48.701 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 20:15:48.796 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 20:15:48.874 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 20:15:48.900 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 20:15:49.719 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 20:15:49.726 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:15:51.606 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:15:51.617 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 20:15:51.673 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 20:15:51.674 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:15:51.674 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:15:51.674 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:15:51.685 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:15:51.685 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 64 ms
+2022-10-05 20:15:51.697 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 20:15:51.728 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:15:51.731 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 20:15:51.747 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.294 seconds (JVM running for 5.741)
+2022-10-05 20:15:51.753 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 20:15:51.825 INFO  [RMI TCP Connection(3)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 20:15:51.826 INFO  [RMI TCP Connection(3)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 20:15:51.827 INFO  [RMI TCP Connection(3)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-10-05 20:16:13.269 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 20:16:13.269 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 20:16:13.299 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 20:16:13.655 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:16:13.656 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:20:52.069 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:20:52.071 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 20:20:52.077 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-05 20:20:54.297 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 26607 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-05 20:20:54.299 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-05 20:20:55.057 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-05 20:20:55.166 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 103 ms. Found 63 JPA repository interfaces.
+2022-10-05 20:20:55.699 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-05 20:20:55.706 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:20:55.707 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:20:55.707 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:20:55.774 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:20:55.774 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1436 ms
+2022-10-05 20:20:56.055 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-05 20:20:56.088 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-05 20:20:56.201 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-05 20:20:56.291 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-05 20:20:56.364 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-05 20:20:56.386 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-05 20:20:57.243 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-05 20:20:57.249 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 20:20:59.079 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-05 20:20:59.092 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-05 20:20:59.145 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-05 20:20:59.145 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:20:59.146 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-05 20:20:59.146 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-05 20:20:59.155 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-05 20:20:59.155 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 59 ms
+2022-10-05 20:20:59.166 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-05 20:20:59.195 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-05 20:20:59.198 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-05 20:20:59.215 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.285 seconds (JVM running for 5.712)
+2022-10-05 20:20:59.220 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-05 20:20:59.319 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 20:20:59.319 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-05 20:20:59.320 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-10-05 20:21:20.520 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-05 20:21:20.520 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-05 20:21:20.548 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-05 20:21:20.931 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-05 20:21:20.932 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-05 20:26:20.561 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:31:20.575 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:36:20.587 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:41:20.600 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:46:20.612 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:51:20.628 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 20:56:20.640 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:00:00.659 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:00:10.673 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:00:20.687 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:00:30.701 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:00:40.715 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:00:50.728 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:01:20.652 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:01:20.660 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:01:30.673 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:01:40.687 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:01:50.699 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:00.710 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:10.720 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:20.729 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:30.738 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:40.743 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:02:50.753 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:00.762 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:10.770 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:20.780 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:30.788 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:40.795 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:03:50.804 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:00.813 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:10.821 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:20.831 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:30.839 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:40.849 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:04:50.859 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:00.868 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:10.876 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:20.885 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:30.894 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:40.904 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:05:50.912 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:06:20.663 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:06:20.668 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:06:30.679 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:06:40.687 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:06:50.697 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:00.706 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:10.715 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:20.724 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:30.735 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:40.743 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:07:50.753 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:00.761 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:10.769 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:20.778 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:30.788 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:40.799 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:08:50.809 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:00.817 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:10.825 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:20.834 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:30.842 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:40.850 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:09:50.857 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:00.866 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:10.875 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:20.882 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:30.890 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:40.899 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:10:50.908 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:11:20.677 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:11:20.682 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:11:30.691 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:11:40.701 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:11:50.711 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:00.720 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:10.728 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:20.737 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:30.746 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:40.756 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:12:50.764 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:00.773 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:10.782 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:20.790 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:30.799 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:40.808 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:13:50.817 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:00.826 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:10.833 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:20.841 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:30.847 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:40.855 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:14:50.863 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:00.871 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:10.881 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:20.889 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:30.897 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:40.903 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:15:50.911 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:16:20.689 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:16:20.695 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:16:30.704 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:16:40.712 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:16:50.720 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:00.725 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:10.731 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:20.737 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:30.744 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:40.753 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:17:50.760 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:00.768 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:10.777 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:20.784 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:30.793 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:40.802 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:18:50.812 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:00.821 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:10.830 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:20.835 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:30.843 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:40.852 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:19:50.862 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:00.870 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:10.878 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:20.889 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:30.900 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:40.908 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:20:50.919 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:21:20.702 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:21:20.708 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:21:30.718 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:21:40.725 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:21:50.733 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:00.743 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:10.752 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:20.762 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:30.771 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:40.777 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:22:50.786 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:00.793 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:10.800 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:20.809 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:30.818 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:40.826 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:23:50.835 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:00.842 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:10.850 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:20.858 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:30.866 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:40.871 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:24:50.878 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:00.886 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:10.894 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:20.903 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:30.911 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:40.919 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:25:50.926 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:26:20.712 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:26:20.716 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:26:30.725 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:26:40.734 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:26:50.742 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:00.750 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:10.758 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:20.764 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:30.774 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:40.782 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:27:50.791 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:00.798 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:10.806 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:20.814 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:30.822 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:40.830 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:28:50.836 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:00.844 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:10.851 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:20.860 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:30.868 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:40.877 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:29:50.885 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:00.893 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:10.901 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:20.909 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:30.915 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:40.922 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:30:50.932 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:31:20.724 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:31:20.730 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:31:30.739 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:31:40.748 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:31:50.756 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:00.764 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:10.773 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:20.782 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:30.790 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:40.799 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:32:50.807 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:00.816 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:10.824 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:20.834 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:30.842 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:40.850 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:33:50.858 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:00.867 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:10.874 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:20.882 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:30.890 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:40.898 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:34:50.906 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:00.913 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:10.921 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:20.928 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:30.936 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:40.944 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:35:50.954 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:36:20.734 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-05 21:36:20.739 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:36:30.748 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:36:40.755 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:36:50.764 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:00.770 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:10.777 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:20.783 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:30.791 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:40.798 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:50.804 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:391 - Waiting to go offline
+2022-10-05 21:37:52.038 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-05 21:37:52.039 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-05 21:37:52.045 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

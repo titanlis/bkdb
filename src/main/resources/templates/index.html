@@ -1,0 +1,83 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="ru">
+<head>
+    <title> Manual Trans Sender </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css" />
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1 class="d-flex justify-content-around"> Ручная отправка данных с сервера/на сервер </h1>
+    </div>
+
+    <div class="container px-4">
+        <!--<div class="row gx-5">-->
+            <div class="col">
+                <div class="text-left">
+                    <div class="p-3 border bg-light"><span th:text="${tabInfo}"></span></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    <div class="p-3 border bg-light">  <!-- <span th:text="${transCycle}"></span>-->
+                        <a th:href="@{/update_tables}" method="get" class="btn btn-success">обновить таблицы с сервера</a>
+                    </div>
+                </div>
+            </div>
+        <!--</div>-->
+    </div>
+
+    <p></p>
+
+    <div class="container px-4">
+        <!--<div class="row gx-5">-->
+        <div class="col">
+            <div class="text-left">
+                <div class="p-3 border bg-light"><span th:text="${transInfo}"></span></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center">
+                <div class="p-3 border bg-light">  <!-- <span th:text="${transCycle}"></span>-->
+                    <a th:href="@{/trans_cycles}" method="get" class="btn btn-success">передать trans_cycles</a>
+                    &nbsp
+                    <a th:href="@{/trans_refuel}" method="get" class="btn btn-success">передать trans_refuel</a>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+
+
+</div>
+
+<p><br></p>
+
+<div class="container">
+    <div class="text-center">
+        <form th:target="blank" th:action="@{/exit}" th:method="get">
+            <input type="submit" style="display: none;">
+            <input type="submit" class="btn btn-primary btn-lg btn-block" value="exit">
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

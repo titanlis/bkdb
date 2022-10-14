@@ -31,6 +31,11 @@ public class TestController {
     @Autowired
     private TablesService tablesService;
 
+    @GetMapping("/trigger_trans_cycles")
+    public void triggerTransCycles(){
+         System.out.println("trigger_trans_cycles");
+    }
+
     /**
      * Вывод всех таблиц с версиями
      */

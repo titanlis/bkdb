@@ -7,7 +7,6 @@ import ru.itm.bkdb.serivce.AbstractService;
 
 @Service
 public class EquipmentService extends AbstractService<Equipment, EquipmentRepository> {
-
     public EquipmentService(EquipmentRepository repository) {
         super(repository);
     }

@@ -92,6 +92,18 @@ public class RepositoryFactory {
     private static TransKeysCycleRepository transKeysCycleRepository;
     private static TransKeysDrillingRepository transKeysDrillingRepository;
     private static TransNetworkRepository transNetworkRepository;
+    private static TransCycleRepository transCycleRepository;
+    private static TransRefuelRepository transRefuelRepository;
+
+    @Autowired
+    public void setTransRefuelRepository(TransRefuelRepository transRefuelRepository) {
+        RepositoryFactory.transRefuelRepository = transRefuelRepository;
+    }
+
+    @Autowired
+    public void setTransCycleRepository(TransCycleRepository transCycleRepository) {
+        RepositoryFactory.transCycleRepository = transCycleRepository;
+    }
 
     @Autowired
     public void setTransNetworkRepository(TransNetworkRepository transNetworkRepository) {
@@ -466,6 +478,8 @@ public class RepositoryFactory {
             case "trans_keys_cycle" -> transKeysCycleRepository;
             case "trans_keys_drilling" -> transKeysDrillingRepository;
             case "trans_network" -> transNetworkRepository;
+            case "trans_cycles" -> transCycleRepository;
+            case "trans_refuel" -> transRefuelRepository;
 
             default ->  null;
         };

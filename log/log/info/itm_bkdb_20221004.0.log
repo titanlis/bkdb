@@ -1,0 +1,50 @@
+2022-10-04 23:10:14.938 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 23315 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-04 23:10:14.941 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-04 23:10:15.771 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-04 23:10:15.888 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 110 ms. Found 63 JPA repository interfaces.
+2022-10-04 23:10:16.437 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-04 23:10:16.445 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-04 23:10:16.445 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-04 23:10:16.446 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-04 23:10:16.533 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-04 23:10:16.534 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1550 ms
+2022-10-04 23:10:16.830 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-04 23:10:16.863 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-04 23:10:17.022 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-04 23:10:17.110 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-04 23:10:17.185 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-04 23:10:17.207 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-04 23:10:18.092 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-04 23:10:18.098 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-04 23:10:19.982 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-04 23:10:19.993 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-04 23:10:20.044 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-04 23:10:20.045 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-04 23:10:20.045 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-04 23:10:20.045 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-04 23:10:20.056 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-04 23:10:20.056 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 60 ms
+2022-10-04 23:10:20.067 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-04 23:10:20.097 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-04 23:10:20.099 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-04 23:10:20.119 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.555 seconds (JVM running for 6.002)
+2022-10-04 23:10:20.125 INFO  [main] ru.itm.bkdb.controllers.UpdateController Line:101 - 
+init = false
+2022-10-04 23:10:20.355 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 23:10:20.356 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-04 23:10:20.358 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-04 23:10:40.723 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:260 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-04 23:10:40.723 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:217 - data is write in server
+2022-10-04 23:10:40.750 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:225 - Table 'trans_coord' is cleaned.
+2022-10-04 23:10:40.935 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:344 - Response. Begin updating these tables :
+	 {}
+2022-10-04 23:10:40.936 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:396 - All tables have been updated
+2022-10-04 23:15:40.762 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:20:40.778 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:25:40.791 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:30:40.805 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:35:40.818 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:40:40.836 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:45:40.848 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:50:40.861 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update
+2022-10-04 23:55:40.871 INFO  [scheduling-1] ru.itm.bkdb.controllers.UpdateController Line:233 - No tables trans_ for update

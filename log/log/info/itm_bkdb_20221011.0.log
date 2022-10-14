@@ -1,0 +1,342 @@
+2022-10-11 23:21:45.456 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 37146 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-11 23:21:45.458 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-11 23:21:46.278 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-11 23:21:46.396 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 109 ms. Found 64 JPA repository interfaces.
+2022-10-11 23:21:46.991 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-11 23:21:46.999 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:21:47.000 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:21:47.000 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:21:47.098 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:21:47.099 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1596 ms
+2022-10-11 23:21:47.419 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-11 23:21:47.479 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-11 23:21:47.626 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-11 23:21:47.738 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-11 23:21:47.829 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-11 23:21:47.858 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-11 23:21:48.796 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-11 23:21:48.803 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:21:50.130 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Line:57  - Adding welcome page template: index
+2022-10-11 23:21:50.805 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:21:50.818 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-11 23:21:50.878 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-11 23:21:50.879 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:21:50.879 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:21:50.879 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:21:50.891 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:21:50.891 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 70 ms
+2022-10-11 23:21:50.902 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-11 23:21:50.930 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:21:50.933 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-11 23:21:50.951 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.877 seconds (JVM running for 6.365)
+2022-10-11 23:21:50.956 INFO  [main] ru.itm.bkdb.serivce.UpdateService Line:90  - 
+init = false
+2022-10-11 23:21:51.376 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-11 23:21:51.377 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-11 23:21:51.379 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-11 23:22:11.067 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:223 - No tables trans_ for update
+2022-10-11 23:22:11.684 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:332 - Response. Begin updating these tables :
+	 {equipment=[31]}
+2022-10-11 23:22:11.685 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment
+2022-10-11 23:22:11.686 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment
+2022-10-11 23:22:12.057 INFO  [scheduling-1] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@6408194b
+2022-10-11 23:22:12.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=2, equipmentName=SDP001, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.133, equipmentMAC=1C:1B:0D:3A:A9:A7, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.110 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=17, equipmentName=CAK006, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=PBZ23EG, equipmentIP=192.168.254.172, equipmentMAC=A4:4E:31:28:86:B0, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.110 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=4, equipmentName=SDP002, equipmentTypeId=4, description=1, model=null, fleet=null, equipmentSerialNumber=012345, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.111 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=1, equipmentName=CAK001, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=08-5452-77-3, equipmentIP=192.168.254.92, equipmentMAC=null, fuelLevel=323.25, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.111 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=25, equipmentName=ESK183, equipmentTypeId=2, description=BC183, model=null, fleet=null, equipmentSerialNumber=SN-BC183, equipmentIP=192.168.254.183, equipmentMAC=00:14:0B:89:B4:1A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.111 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=6, equipmentName=CAK002, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.153, equipmentMAC=00:14:0B:87:7B:20, fuelLevel=323.75, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.111 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=24, equipmentName=KRIL63, equipmentTypeId=2, description=ubComp, model=null, fleet=null, equipmentSerialNumber=KRIL63-VPN, equipmentIP=192.168.1.16, equipmentMAC=94:DB:C9:4A:14:58, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.112 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=8, equipmentName=testS3, equipmentTypeId=5, description=null, model=null, fleet=null, equipmentSerialNumber=2, equipmentIP=192.168.254.140, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.112 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=9, equipmentName=CAK003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=3, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.112 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=10, equipmentName=ESK01, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=4, equipmentIP=192.168.254.146, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.112 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=11, equipmentName=ESK02, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=5, equipmentIP=192.168.254.147, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.112 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=12, equipmentName=testS7, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=6, equipmentIP=192.168.254.148, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.113 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=13, equipmentName=FT1, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=7, equipmentIP=192.168.254.149, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.113 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=14, equipmentName=CAK004, equipmentTypeId=1, description=newTest, model=null, fleet=null, equipmentSerialNumber=8, equipmentIP=192.168.254.150, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.113 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=16, equipmentName=CAK005, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=9, equipmentIP=192.168.254.151, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=0, costCenter=null, active=false]
+2022-10-11 23:22:12.113 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=22, equipmentName=CAK007, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=10, equipmentIP=192.168.254.152, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=false]
+2022-10-11 23:22:12.114 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=7, equipmentName=ESK07, equipmentTypeId=2, description=123, model=null, fleet=null, equipmentSerialNumber=1, equipmentIP=192.168.254.144, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.114 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=27, equipmentName=fab4, equipmentTypeId=2, description=fab4, model=null, fleet=null, equipmentSerialNumber=VPN72-FABR4, equipmentIP=192.168.100.21, equipmentMAC=00:0C:29:01:B0:A1, fuelLevel=800.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.114 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=28, equipmentName=SDP159, equipmentTypeId=4, description=BC159, model=null, fleet=null, equipmentSerialNumber=SN-BC159, equipmentIP=192.168.254.159, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.114 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=15, equipmentName=CAK033, equipmentTypeId=1, description=CAK033, model=null, fleet=null, equipmentSerialNumber=1542, equipmentIP=192.168.254.143, equipmentMAC=00:14:0B:87:07:7B, fuelLevel=1300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.115 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=5, equipmentName=ESK05, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00184, equipmentIP=192.168.254.142, equipmentMAC=00:14:0B:87:7B:21, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.115 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=19, equipmentName=SDP019, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00192, equipmentIP=192.168.254.156, equipmentMAC=00:14:0B:87:7B:01, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.115 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=3, equipmentName=MT003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.134, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.115 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=23, equipmentName=SDP023, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530HW00049, equipmentIP=192.168.254.142, equipmentMAC=null, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.115 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=26, equipmentName=ESK182, equipmentTypeId=2, description=BC182, model=null, fleet=null, equipmentSerialNumber=SY9530AT00002, equipmentIP=192.168.254.182, equipmentMAC=00:14:0B:87:07:7A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:22:12.158 INFO  [scheduling-1] org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl Line:213 - HHH000010: On release of batch it still contained JDBC statements
+2022-10-11 23:22:12.207 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment = 31 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:22:12.207 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment'  has been updated.
+2022-10-11 23:22:12.208 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:384 - All tables have been updated
+2022-10-11 23:25:25.614 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:332 - Response. Begin updating these tables :
+	 {equipment_haul=[4]}
+2022-10-11 23:25:25.615 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment_haul
+2022-10-11 23:25:25.615 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment_haul
+2022-10-11 23:25:25.889 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@32482849
+2022-10-11 23:25:25.897 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=1, empty_weight=3.0, tire_type=null, equip_id=12]
+2022-10-11 23:25:25.898 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=2, empty_weight=1.0, tire_type=null, equip_id=17]
+2022-10-11 23:25:25.898 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=3, empty_weight=20.0, tire_type=1:2:2:4, equip_id=2]
+2022-10-11 23:25:25.899 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=4, empty_weight=20.0, tire_type=1:2:2:4, equip_id=4]
+2022-10-11 23:25:25.899 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=5, empty_weight=20.0, tire_type=1:2:2:4, equip_id=5]
+2022-10-11 23:25:25.899 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=6, empty_weight=20.0, tire_type=1:2:2:4, equip_id=15]
+2022-10-11 23:25:25.900 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=7, empty_weight=30.0, tire_type=1:2:2:4, equip_id=3]
+2022-10-11 23:25:25.900 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=8, empty_weight=3.0, tire_type=null, equip_id=9]
+2022-10-11 23:25:25.900 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=9, empty_weight=20.0, tire_type=null, equip_id=1]
+2022-10-11 23:25:25.900 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=10, empty_weight=20.0, tire_type=null, equip_id=22]
+2022-10-11 23:25:25.946 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment_haul = 4 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:25:25.947 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment_haul'  has been updated.
+2022-10-11 23:25:25.947 INFO  [http-nio-2700-exec-2] ru.itm.bkdb.serivce.UpdateService Line:384 - All tables have been updated
+2022-10-11 23:26:36.987 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:332 - Response. Begin updating these tables :
+	 {equipment=[31], equipment_drill=[3], equipment_haul=[4], equipment_load=[3], holes=[124]}
+2022-10-11 23:26:36.987 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment
+2022-10-11 23:26:36.987 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment
+2022-10-11 23:26:37.250 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@2637e10
+2022-10-11 23:26:37.254 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=2, equipmentName=SDP001, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.133, equipmentMAC=1C:1B:0D:3A:A9:A7, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.254 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=17, equipmentName=CAK006, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=PBZ23EG, equipmentIP=192.168.254.172, equipmentMAC=A4:4E:31:28:86:B0, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.255 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=4, equipmentName=SDP002, equipmentTypeId=4, description=1, model=null, fleet=null, equipmentSerialNumber=012345, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.255 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=1, equipmentName=CAK001, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=08-5452-77-3, equipmentIP=192.168.254.92, equipmentMAC=null, fuelLevel=323.25, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.255 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=25, equipmentName=ESK183, equipmentTypeId=2, description=BC183, model=null, fleet=null, equipmentSerialNumber=SN-BC183, equipmentIP=192.168.254.183, equipmentMAC=00:14:0B:89:B4:1A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.256 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=6, equipmentName=CAK002, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.153, equipmentMAC=00:14:0B:87:7B:20, fuelLevel=323.75, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.256 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=24, equipmentName=KRIL63, equipmentTypeId=2, description=ubComp, model=null, fleet=null, equipmentSerialNumber=KRIL63-VPN, equipmentIP=192.168.1.16, equipmentMAC=94:DB:C9:4A:14:58, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.256 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=8, equipmentName=testS3, equipmentTypeId=5, description=null, model=null, fleet=null, equipmentSerialNumber=2, equipmentIP=192.168.254.140, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.257 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=9, equipmentName=CAK003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=3, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.257 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=10, equipmentName=ESK01, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=4, equipmentIP=192.168.254.146, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.257 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=11, equipmentName=ESK02, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=5, equipmentIP=192.168.254.147, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.257 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=12, equipmentName=testS7, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=6, equipmentIP=192.168.254.148, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.258 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=13, equipmentName=FT1, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=7, equipmentIP=192.168.254.149, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.258 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=14, equipmentName=CAK004, equipmentTypeId=1, description=newTest, model=null, fleet=null, equipmentSerialNumber=8, equipmentIP=192.168.254.150, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.258 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=16, equipmentName=CAK005, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=9, equipmentIP=192.168.254.151, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=0, costCenter=null, active=false]
+2022-10-11 23:26:37.258 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=22, equipmentName=CAK007, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=10, equipmentIP=192.168.254.152, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=false]
+2022-10-11 23:26:37.258 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=7, equipmentName=ESK07, equipmentTypeId=2, description=123, model=null, fleet=null, equipmentSerialNumber=1, equipmentIP=192.168.254.144, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=27, equipmentName=fab4, equipmentTypeId=2, description=fab4, model=null, fleet=null, equipmentSerialNumber=VPN72-FABR4, equipmentIP=192.168.100.21, equipmentMAC=00:0C:29:01:B0:A1, fuelLevel=800.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=28, equipmentName=SDP159, equipmentTypeId=4, description=BC159, model=null, fleet=null, equipmentSerialNumber=SN-BC159, equipmentIP=192.168.254.159, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=15, equipmentName=CAK033, equipmentTypeId=1, description=CAK033, model=null, fleet=null, equipmentSerialNumber=1542, equipmentIP=192.168.254.143, equipmentMAC=00:14:0B:87:07:7B, fuelLevel=1300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=5, equipmentName=ESK05, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00184, equipmentIP=192.168.254.142, equipmentMAC=00:14:0B:87:7B:21, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=19, equipmentName=SDP019, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00192, equipmentIP=192.168.254.156, equipmentMAC=00:14:0B:87:7B:01, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.259 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=3, equipmentName=MT003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.134, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.260 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=23, equipmentName=SDP023, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530HW00049, equipmentIP=192.168.254.142, equipmentMAC=null, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.260 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=26, equipmentName=ESK182, equipmentTypeId=2, description=BC182, model=null, fleet=null, equipmentSerialNumber=SY9530AT00002, equipmentIP=192.168.254.182, equipmentMAC=00:14:0B:87:07:7A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:26:37.271 INFO  [http-nio-2700-exec-5] org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl Line:213 - HHH000010: On release of batch it still contained JDBC statements
+2022-10-11 23:26:37.297 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment = 31 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:26:37.297 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment'  has been updated.
+2022-10-11 23:26:37.298 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment_drill
+2022-10-11 23:26:37.298 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment_drill
+2022-10-11 23:26:37.830 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@4e2d40bc
+2022-10-11 23:26:37.838 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_drill [id=1, type=ARM, bx_shift=0.0, by_shift=0.0, bh=2.0, H=4.0, bc=2.0, equip_id=5]
+2022-10-11 23:26:37.838 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_drill [id=2, type=ARM, bx_shift=0.0, by_shift=0.0, bh=2.0, H=4.0, bc=2.0, equip_id=15]
+2022-10-11 23:26:37.839 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_drill [id=3, type=ARM, bx_shift=0.0, by_shift=0.0, bh=2.0, H=4.0, bc=2.0, equip_id=2]
+2022-10-11 23:26:37.839 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_drill [id=4, type=ARM, bx_shift=0.0, by_shift=0.0, bh=2.0, H=4.0, bc=2.0, equip_id=3]
+2022-10-11 23:26:37.839 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_drill [id=6, type=ARM, bx_shift=0.0, by_shift=0.0, bh=2.0, H=4.0, bc=2.0, equip_id=23]
+2022-10-11 23:26:37.864 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment_drill = 3 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:26:37.864 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment_drill'  has been updated.
+2022-10-11 23:26:37.865 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment_haul
+2022-10-11 23:26:37.865 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment_haul
+2022-10-11 23:26:38.435 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@6ee7983c
+2022-10-11 23:26:38.436 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=1, empty_weight=3.0, tire_type=null, equip_id=12]
+2022-10-11 23:26:38.436 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=2, empty_weight=1.0, tire_type=null, equip_id=17]
+2022-10-11 23:26:38.436 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=3, empty_weight=20.0, tire_type=1:2:2:4, equip_id=2]
+2022-10-11 23:26:38.437 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=4, empty_weight=20.0, tire_type=1:2:2:4, equip_id=4]
+2022-10-11 23:26:38.437 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=5, empty_weight=20.0, tire_type=1:2:2:4, equip_id=5]
+2022-10-11 23:26:38.438 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=6, empty_weight=20.0, tire_type=1:2:2:4, equip_id=15]
+2022-10-11 23:26:38.438 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=7, empty_weight=30.0, tire_type=1:2:2:4, equip_id=3]
+2022-10-11 23:26:38.438 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=8, empty_weight=3.0, tire_type=null, equip_id=9]
+2022-10-11 23:26:38.439 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=9, empty_weight=20.0, tire_type=null, equip_id=1]
+2022-10-11 23:26:38.439 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=10, empty_weight=20.0, tire_type=null, equip_id=22]
+2022-10-11 23:26:38.466 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment_haul = 4 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:26:38.467 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment_haul'  has been updated.
+2022-10-11 23:26:38.467 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment_load
+2022-10-11 23:26:38.468 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment_load
+2022-10-11 23:26:38.818 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@54923eac
+2022-10-11 23:26:38.822 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=1, radius_load=20.0, radius_wait=40.0, radius_bucket=70.0, equip_id=2]
+2022-10-11 23:26:38.823 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=2, radius_load=20.0, radius_wait=40.0, radius_bucket=null, equip_id=5]
+2022-10-11 23:26:38.823 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=3, radius_load=1.0, radius_wait=2.0, radius_bucket=3.0, equip_id=1]
+2022-10-11 23:26:38.823 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=4, radius_load=20.0, radius_wait=30.0, radius_bucket=70.0, equip_id=15]
+2022-10-11 23:26:38.823 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=5, radius_load=20.0, radius_wait=40.0, radius_bucket=70.0, equip_id=17]
+2022-10-11 23:26:38.824 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_load [id=6, radius_load=20.0, radius_wait=50.0, radius_bucket=70.0, equip_id=3]
+2022-10-11 23:26:38.844 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment_load = 3 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:26:38.845 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment_load'  has been updated.
+2022-10-11 23:26:38.845 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : holes
+2022-10-11 23:26:38.845 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/holes
+2022-10-11 23:26:39.205 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@5db1b595
+2022-10-11 23:26:39.208 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=1, id_loc=138, number=1, drilling_z=0.0, azimuth=10.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.208 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=2, id_loc=139, number=6, drilling_z=0.0, azimuth=60.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.208 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=3, id_loc=140, number=2, drilling_z=2.0, azimuth=21.0, drilling_angle=5.0, after_deep=4.0, description='null']
+2022-10-11 23:26:39.209 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=4, id_loc=141, number=3, drilling_z=0.0, azimuth=30.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.209 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=5, id_loc=142, number=4, drilling_z=0.0, azimuth=40.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.209 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=6, id_loc=143, number=5, drilling_z=0.0, azimuth=50.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.210 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=7, id_loc=144, number=7, drilling_z=0.0, azimuth=70.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.210 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=8, id_loc=145, number=8, drilling_z=0.0, azimuth=80.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.210 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=9, id_loc=112, number=11, drilling_z=10.0, azimuth=300.0, drilling_angle=40.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.211 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=10, id_loc=111, number=9, drilling_z=9.0, azimuth=150.0, drilling_angle=50.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.211 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=11, id_loc=137, number=1, drilling_z=0.0, azimuth=0.0, drilling_angle=0.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.211 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=12, id_loc=128, number=1, drilling_z=260.0, azimuth=260.0, drilling_angle=90.0, after_deep=2.0, description='null']
+2022-10-11 23:26:39.211 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=13, id_loc=81, number=2, drilling_z=260.0, azimuth=60.0, drilling_angle=15.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.212 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=14, id_loc=83, number=4, drilling_z=4.0, azimuth=180.0, drilling_angle=25.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.212 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=15, id_loc=82, number=3, drilling_z=3.0, azimuth=120.0, drilling_angle=20.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.212 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=16, id_loc=113, number=5, drilling_z=5.0, azimuth=200.0, drilling_angle=30.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.212 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=17, id_loc=114, number=6, drilling_z=6.0, azimuth=210.0, drilling_angle=40.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.213 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=18, id_loc=108, number=7, drilling_z=7.0, azimuth=20.0, drilling_angle=20.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.213 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=19, id_loc=110, number=8, drilling_z=8.0, azimuth=40.0, drilling_angle=60.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.213 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=20, id_loc=124, number=1, drilling_z=260.0, azimuth=260.0, drilling_angle=90.0, after_deep=2.0, description='null']
+2022-10-11 23:26:39.213 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=21, id_loc=129, number=13, drilling_z=260.0, azimuth=260.0, drilling_angle=90.0, after_deep=20.0, description='null']
+2022-10-11 23:26:39.214 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=22, id_loc=130, number=12, drilling_z=0.0, azimuth=250.0, drilling_angle=90.0, after_deep=0.0, description='null']
+2022-10-11 23:26:39.214 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=23, id_loc=126, number=15, drilling_z=260.0, azimuth=260.0, drilling_angle=90.0, after_deep=20.0, description='null']
+2022-10-11 23:26:39.214 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:460 - drilling.holes [id=24, id_loc=79, number=14, drilling_z=260.0, azimuth=260.0, drilling_angle=90.0, after_deep=26.0, description='null']
+2022-10-11 23:26:39.262 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:443 - holes = 124 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:26:39.263 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'holes'  has been updated.
+2022-10-11 23:26:39.263 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.UpdateService Line:384 - All tables have been updated
+2022-10-11 23:27:11.082 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:223 - No tables trans_ for update
+2022-10-11 23:31:55.460 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:142 - TimeUnit.SECONDS.sleep(20L) прерван.
+2022-10-11 23:31:55.470 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:223 - No tables trans_ for update
+2022-10-11 23:31:55.491 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:31:55.493 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-11 23:31:55.500 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-11 23:45:41.290 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 40248 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-11 23:45:41.293 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-11 23:45:42.018 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-11 23:45:42.145 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 118 ms. Found 64 JPA repository interfaces.
+2022-10-11 23:45:42.692 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-11 23:45:42.701 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:45:42.701 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:45:42.702 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:45:42.779 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:45:42.779 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1446 ms
+2022-10-11 23:45:43.070 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-11 23:45:43.105 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-11 23:45:43.218 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-11 23:45:43.310 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-11 23:45:43.396 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-11 23:45:43.421 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-11 23:45:44.232 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-11 23:45:44.239 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:45:45.552 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Line:57  - Adding welcome page template: index
+2022-10-11 23:45:46.176 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:45:46.186 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-11 23:45:46.239 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-11 23:45:46.240 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:45:46.241 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:45:46.241 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:45:46.253 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:45:46.253 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 64 ms
+2022-10-11 23:45:46.264 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-11 23:45:46.304 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:45:46.306 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-11 23:45:46.322 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.581 seconds (JVM running for 6.018)
+2022-10-11 23:45:46.327 INFO  [main] ru.itm.bkdb.serivce.UpdateService Line:90  - 
+init = false
+2022-10-11 23:45:46.602 INFO  [RMI TCP Connection(1)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-11 23:45:46.602 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-11 23:45:46.604 INFO  [RMI TCP Connection(1)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 2 ms
+2022-10-11 23:46:06.422 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:223 - No tables trans_ for update
+2022-10-11 23:46:07.077 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:332 - Response. Begin updating these tables :
+	 {equipment=[31], equipment_haul=[4]}
+2022-10-11 23:46:07.078 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment
+2022-10-11 23:46:07.079 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment
+2022-10-11 23:46:07.659 INFO  [scheduling-1] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@4242849d
+2022-10-11 23:46:07.716 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=2, equipmentName=SDP001, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.133, equipmentMAC=1C:1B:0D:3A:A9:A7, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.717 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=17, equipmentName=CAK006, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=PBZ23EG, equipmentIP=192.168.254.172, equipmentMAC=A4:4E:31:28:86:B0, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.717 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=4, equipmentName=SDP002, equipmentTypeId=4, description=1, model=null, fleet=null, equipmentSerialNumber=012345, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.717 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=1, equipmentName=CAK001, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=08-5452-77-3, equipmentIP=192.168.254.92, equipmentMAC=null, fuelLevel=323.25, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.717 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=25, equipmentName=ESK183, equipmentTypeId=2, description=BC183, model=null, fleet=null, equipmentSerialNumber=SN-BC183, equipmentIP=192.168.254.183, equipmentMAC=00:14:0B:89:B4:1A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.718 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=6, equipmentName=CAK002, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.153, equipmentMAC=00:14:0B:87:7B:20, fuelLevel=323.75, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.718 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=24, equipmentName=KRIL63, equipmentTypeId=2, description=ubComp, model=null, fleet=null, equipmentSerialNumber=KRIL63-VPN, equipmentIP=192.168.1.16, equipmentMAC=94:DB:C9:4A:14:58, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.718 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=8, equipmentName=testS3, equipmentTypeId=5, description=null, model=null, fleet=null, equipmentSerialNumber=2, equipmentIP=192.168.254.140, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.718 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=9, equipmentName=CAK003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=3, equipmentIP=192.168.254.145, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.718 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=10, equipmentName=ESK01, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=4, equipmentIP=192.168.254.146, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=11, equipmentName=ESK02, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=5, equipmentIP=192.168.254.147, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=12, equipmentName=testS7, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=6, equipmentIP=192.168.254.148, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=13, equipmentName=FT1, equipmentTypeId=3, description=null, model=null, fleet=null, equipmentSerialNumber=7, equipmentIP=192.168.254.149, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=14, equipmentName=CAK004, equipmentTypeId=1, description=newTest, model=null, fleet=null, equipmentSerialNumber=8, equipmentIP=192.168.254.150, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=16, equipmentName=CAK005, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=9, equipmentIP=192.168.254.151, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=0, costCenter=null, active=false]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=22, equipmentName=CAK007, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=10, equipmentIP=192.168.254.152, equipmentMAC=null, fuelLevel=null, gnss=null, tires=null, costCenter=null, active=false]
+2022-10-11 23:46:07.719 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=7, equipmentName=ESK07, equipmentTypeId=2, description=123, model=null, fleet=null, equipmentSerialNumber=1, equipmentIP=192.168.254.144, equipmentMAC=null, fuelLevel=0.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=27, equipmentName=fab4, equipmentTypeId=2, description=fab4, model=null, fleet=null, equipmentSerialNumber=VPN72-FABR4, equipmentIP=192.168.100.21, equipmentMAC=00:0C:29:01:B0:A1, fuelLevel=800.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=28, equipmentName=SDP159, equipmentTypeId=4, description=BC159, model=null, fleet=null, equipmentSerialNumber=SN-BC159, equipmentIP=192.168.254.159, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=15, equipmentName=CAK033, equipmentTypeId=1, description=CAK033, model=null, fleet=null, equipmentSerialNumber=1542, equipmentIP=192.168.254.143, equipmentMAC=00:14:0B:87:07:7B, fuelLevel=1300.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=5, equipmentName=ESK05, equipmentTypeId=2, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00184, equipmentIP=192.168.254.142, equipmentMAC=00:14:0B:87:7B:21, fuelLevel=2000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=19, equipmentName=SDP019, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530CT00192, equipmentIP=192.168.254.156, equipmentMAC=00:14:0B:87:7B:01, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=3, equipmentName=MT003, equipmentTypeId=1, description=null, model=null, fleet=null, equipmentSerialNumber=null, equipmentIP=192.168.254.134, equipmentMAC=30:9C:23:29:6F:F5, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.720 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=23, equipmentName=SDP023, equipmentTypeId=4, description=null, model=null, fleet=null, equipmentSerialNumber=SY9530HW00049, equipmentIP=192.168.254.142, equipmentMAC=null, fuelLevel=1000.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.721 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment [id=26, equipmentName=ESK182, equipmentTypeId=2, description=BC182, model=null, fleet=null, equipmentSerialNumber=SY9530AT00002, equipmentIP=192.168.254.182, equipmentMAC=00:14:0B:87:07:7A, fuelLevel=500.0, gnss=null, tires=null, costCenter=null, active=true]
+2022-10-11 23:46:07.807 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment = 31 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:46:07.807 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment'  has been updated.
+2022-10-11 23:46:07.807 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:338 - 
+Update the table : equipment_haul
+2022-10-11 23:46:07.807 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:339 - http://localhost:2600/api/v1/192.168.1.15/update/equipment_haul
+2022-10-11 23:46:08.105 INFO  [scheduling-1] ru.itm.bkdb.network.Request Line:38  - Response. The update came :	 ru.itm.bkdb.udp.DBModelContainer@7d4a25ea
+2022-10-11 23:46:08.108 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=1, empty_weight=3.0, tire_type=null, equip_id=12]
+2022-10-11 23:46:08.108 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=2, empty_weight=1.0, tire_type=null, equip_id=17]
+2022-10-11 23:46:08.108 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=3, empty_weight=20.0, tire_type=1:2:2:4, equip_id=2]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=4, empty_weight=20.0, tire_type=1:2:2:4, equip_id=4]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=5, empty_weight=20.0, tire_type=1:2:2:4, equip_id=5]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=6, empty_weight=20.0, tire_type=1:2:2:4, equip_id=15]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=7, empty_weight=30.0, tire_type=1:2:2:4, equip_id=3]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=8, empty_weight=3.0, tire_type=null, equip_id=9]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=9, empty_weight=20.0, tire_type=null, equip_id=1]
+2022-10-11 23:46:08.109 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:460 - equipment.equipment_haul [id=10, empty_weight=20.0, tire_type=null, equip_id=22]
+2022-10-11 23:46:08.134 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:443 - equipment_haul = 4 in (TableVersion). The version of the table in the database has been updated.
+2022-10-11 23:46:08.134 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:361 - Table 'equipment_haul'  has been updated.
+2022-10-11 23:46:08.134 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:384 - All tables have been updated
+2022-10-11 23:47:44.268 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:47:44.271 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-11 23:47:44.276 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-10-11 23:52:03.568 INFO  [main] ru.itm.bkdb.BkdbApplication Line:55  - Starting BkdbApplication using Java 17.0.2 on itmComp with PID 41003 (/home/itm/yd/ITMiningYD/12/bk/bkdb/build/classes/java/main started by itm in /home/itm/yd/ITMiningYD/12/bk/bkdb)
+2022-10-11 23:52:03.571 INFO  [main] ru.itm.bkdb.BkdbApplication Line:640 - The following 1 profile is active: "mainProfile"
+2022-10-11 23:52:04.315 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-11 23:52:04.451 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 128 ms. Found 64 JPA repository interfaces.
+2022-10-11 23:52:04.992 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 2700 (http)
+2022-10-11 23:52:05.000 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:52:05.001 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:52:05.001 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:52:05.075 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:52:05.075 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 1458 ms
+2022-10-11 23:52:05.373 INFO  [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-11 23:52:05.404 INFO  [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-11 23:52:05.523 INFO  [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-11 23:52:05.613 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-10-11 23:52:05.674 INFO  [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-10-11 23:52:05.700 INFO  [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-11 23:52:06.610 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-11 23:52:06.619 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:52:07.998 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Line:57  - Adding welcome page template: index
+2022-10-11 23:52:08.662 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-2700"]
+2022-10-11 23:52:08.673 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 2700 (http) with context path ''
+2022-10-11 23:52:08.725 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 10055 (http)
+2022-10-11 23:52:08.726 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:52:08.726 INFO  [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-10-11 23:52:08.726 INFO  [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-11 23:52:08.736 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-10-11 23:52:08.736 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 59 ms
+2022-10-11 23:52:08.746 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Line:58  - Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-11 23:52:08.773 INFO  [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-10055"]
+2022-10-11 23:52:08.777 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 10055 (http) with context path ''
+2022-10-11 23:52:08.794 INFO  [main] ru.itm.bkdb.BkdbApplication Line:61  - Started BkdbApplication in 5.6 seconds (JVM running for 6.014)
+2022-10-11 23:52:08.799 INFO  [main] ru.itm.bkdb.serivce.UpdateService Line:90  - 
+init = false
+2022-10-11 23:52:09.116 INFO  [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-11 23:52:09.116 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-11 23:52:09.119 INFO  [RMI TCP Connection(2)-127.0.0.1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-10-11 23:52:28.921 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:223 - No tables trans_ for update
+2022-10-11 23:52:29.552 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:332 - Response. Begin updating these tables :
+	 {}
+2022-10-11 23:52:29.553 INFO  [scheduling-1] ru.itm.bkdb.serivce.UpdateService Line:384 - All tables have been updated
+2022-10-11 23:52:57.158 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.AdminServiceImpl Line:44  - trans_cycles
+2022-10-11 23:52:58.036 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.AdminServiceImpl Line:139 - response.hasBody() && response.getBody() == 1 -> true
+2022-10-11 23:52:58.036 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.AdminServiceImpl Line:93  - data is write in server
+2022-10-11 23:52:58.037 INFO  [http-nio-2700-exec-5] ru.itm.bkdb.serivce.AdminServiceImpl Line:99  - Table 'trans_cycles' is cleaned.
+2022-10-11 23:53:51.648 INFO  [http-nio-10055-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-11 23:53:51.648 INFO  [http-nio-10055-exec-1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-10-11 23:53:51.649 INFO  [http-nio-10055-exec-1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-10-11 23:53:51.661 INFO  [http-nio-2700-exec-8] ru.itm.bkdb.controllers.ShutdownManager Line:47  - Service is stopped : {"message":"Shutting down, bye..."}
+2022-10-11 23:53:52.204 INFO  [Thread-1] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-11 23:53:52.206 INFO  [Thread-1] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-10-11 23:53:52.212 INFO  [Thread-1] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

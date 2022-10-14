@@ -27,4 +27,7 @@ public abstract class AbstractEntity{
         this.id = id;
     }
 
-    public String toStringShow(){return toString();};}
+    public String toStringShow(){return toString();};
+
+    public boolean isEnding() { return true; }
+}
